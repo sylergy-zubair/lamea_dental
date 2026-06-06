@@ -2,7 +2,7 @@ import styles from './Button.module.css';
 
 interface ButtonProps {
   children: React.ReactNode;
-  variant?: 'primary' | 'outline' | 'outlineDark';
+  variant?: 'primary' | 'outline' | 'outlineLight';
   href: string;
   onClick?: () => void;
 }

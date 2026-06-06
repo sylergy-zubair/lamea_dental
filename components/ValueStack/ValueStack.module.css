@@ -1,23 +1,23 @@
 .valueStack {
-  padding: 100px 0;
-  background-color: var(--warm-cream);
+  padding: clamp(60px, 8vw, 120px) 0;
+  background-color: var(--chalk);
 }
 
 .sectionLabel {
   font-size: 0.75rem;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--champagne-gold);
+  letter-spacing: 0.15em;
+  color: var(--silver);
   margin-bottom: 16px;
 }
 
 .sectionTitle {
-  font-size: 2.5rem;
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.02em;
-  color: var(--deep-navy);
+  color: var(--charcoal);
   margin-bottom: 60px;
 }
 
@@ -28,11 +28,10 @@
 }
 
 .card {
-  background-color: var(--soft-white);
+  background-color: var(--bone);
   border-radius: var(--radius-md);
-  padding: 32px 24px;
+  padding: 40px 28px;
   text-align: center;
-  box-shadow: var(--shadow-card);
   transition: all var(--transition-base);
 }
 
@@ -42,30 +41,32 @@
 }
 
 .icon {
-  width: 48px;
-  height: 48px;
-  margin: 0 auto 20px;
-  background-color: var(--warm-cream);
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 24px;
+  background-color: var(--chalk);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--charcoal);
 }
 
 .cardTitle {
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.03em;
-  color: var(--deep-navy);
-  margin-bottom: 8px;
+  letter-spacing: 0.05em;
+  color: var(--charcoal);
+  margin-bottom: 12px;
 }
 
 .cardText {
   font-size: 0.875rem;
-  color: var(--charcoal);
-  opacity: 0.8;
+  color: var(--graphite);
+  line-height: 1.6;
 }
 
 @media (max-width: 900px) {

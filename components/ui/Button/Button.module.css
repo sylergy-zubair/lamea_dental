@@ -7,41 +7,42 @@
   font-size: 0.875rem;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.08em;
   transition: all var(--transition-base);
   cursor: pointer;
+  white-space: nowrap;
 }
 
 .primary {
-  background-color: var(--champagne-gold);
-  color: var(--deep-navy);
+  background-color: var(--charcoal);
+  color: var(--bone);
 }
 
 .primary:hover {
-  background-color: #c4a030;
+  background-color: var(--graphite);
   transform: translateY(-2px);
 }
 
 .outline {
   background-color: transparent;
-  color: var(--soft-white);
-  border: 2px solid var(--soft-white);
+  color: var(--charcoal);
+  border: 2px solid var(--charcoal);
 }
 
 .outline:hover {
-  background-color: var(--soft-white);
-  color: var(--deep-navy);
+  background-color: var(--charcoal);
+  color: var(--bone);
   transform: translateY(-2px);
 }
 
-.outlineDark {
+.outlineLight {
   background-color: transparent;
-  color: var(--deep-navy);
-  border: 2px solid var(--deep-navy);
+  color: var(--bone);
+  border: 2px solid var(--bone);
 }
 
-.outlineDark:hover {
-  background-color: var(--deep-navy);
-  color: var(--soft-white);
+.outlineLight:hover {
+  background-color: var(--bone);
+  color: var(--obsidian);
   transform: translateY(-2px);
 }
