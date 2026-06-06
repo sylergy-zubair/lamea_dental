@@ -4,30 +4,33 @@ import Button from '@/components/ui/Button/Button';
 export default function Hero() {
   return (
     <section className={styles.hero}>
-      <div className={`container ${styles.heroInner}`}>
+      <video
+        className={styles.heroVideo}
+        autoPlay
+        muted
+        loop
+        playsInline
+        src="/lamea-dental.mp4"
+      />
+      <div className={styles.heroOverlay} />
+      <div className={styles.heroInner}>
         <div className={styles.heroContent}>
-          <h1 className={styles.heroHeadline}>
-            Your Smile,<br />
-            Transformed.
-          </h1>
-          <p className={styles.heroSubtext}>
-            Expert composite bonding at transparent prices.
-            See your new smile before you commit with our AI preview.
-          </p>
-          <div className={styles.heroCtas}>
-            <Button href="#consultation" variant="primary">
-              Start Consultation
-            </Button>
-            <Button href="#preview" variant="outline">
-              Upload Your Smile
-            </Button>
+          <div className={styles.heroTop}>
+            <h1 className={styles.heroHeadline}>
+              Excellence in Cosmetic Dentistry.
+            </h1>
+            <div className={styles.heroCtas}>
+              <Button href="#consultation" variant="primary">
+                Book Your Consultation
+              </Button>
+              <Button href="tel:+447700000000" variant="outlineLight">
+                Call Now
+              </Button>
+            </div>
           </div>
-        </div>
-        <div className={styles.heroVisual}>
-          <img
-            src="https://images.unsplash.com/photo-1606811841681-b73b2558f2d6?w=800&q=80"
-            alt="Confident smile with composite bonding"
-          />
+          <p className={styles.heroSubtext}>
+            Bring your smile to light.
+          </p>
         </div>
       </div>
     </section>

@@ -1,0 +1,910 @@
+/*!*****************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./components/ContactForm/ContactForm.module.css ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************************/
+.ContactForm_section__74FfA {
+  padding: clamp(60px, 8vw, 120px) 0;
+  background-color: var(--chalk);
+}
+
+.ContactForm_inner__efDL4 {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  grid-gap: clamp(40px, 6vw, 80px);
+  gap: clamp(40px, 6vw, 80px);
+  align-items: start;
+}
+
+.ContactForm_content__wIV5x {
+  max-width: 480px;
+}
+
+.ContactForm_sectionLabel___xwAn {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--silver);
+  margin-bottom: 16px;
+}
+
+.ContactForm_title__cNMri {
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: var(--charcoal);
+  margin-bottom: 24px;
+}
+
+.ContactForm_text__6AxaX {
+  font-size: 1rem;
+  color: var(--graphite);
+  line-height: 1.7;
+  margin-bottom: 32px;
+}
+
+.ContactForm_contactDetails__oCEwI {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.ContactForm_contactItem__a73RT {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.875rem;
+  color: var(--graphite);
+}
+
+.ContactForm_contactIcon__JQ8O_ {
+  width: 20px;
+  height: 20px;
+  color: var(--charcoal);
+  flex-shrink: 0;
+}
+
+.ContactForm_form__sgi8v {
+  background-color: var(--bone);
+  border-radius: var(--radius-lg);
+  padding: clamp(32px, 4vw, 48px);
+}
+
+.ContactForm_formGroup__wKzyj {
+  margin-bottom: 20px;
+}
+
+.ContactForm_label__X11AX {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--charcoal);
+  margin-bottom: 8px;
+}
+
+.ContactForm_input__NKEua,
+.ContactForm_textarea__pAfA0 {
+  width: 100%;
+  padding: 14px 16px;
+  font-size: 0.875rem;
+  font-family: inherit;
+  color: var(--graphite);
+  background-color: var(--chalk);
+  border: 1px solid var(--smoke);
+  border-radius: var(--radius-sm);
+  transition: border-color var(--transition-base);
+}
+
+.ContactForm_input__NKEua:focus,
+.ContactForm_textarea__pAfA0:focus {
+  outline: none;
+  border-color: var(--charcoal);
+}
+
+.ContactForm_input__NKEua::placeholder,
+.ContactForm_textarea__pAfA0::placeholder {
+  color: var(--silver);
+}
+
+.ContactForm_textarea__pAfA0 {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.ContactForm_submit__OkA2Y {
+  width: 100%;
+  padding: 16px 28px;
+  background-color: var(--charcoal);
+  color: var(--bone);
+  font-size: 0.875rem;
+  font-weight: 600;
+  font-family: inherit;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+
+.ContactForm_submit__OkA2Y:hover {
+  background-color: var(--graphite);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 900px) {
+  .ContactForm_inner__efDL4 {
+    grid-template-columns: 1fr;
+  }
+
+  .ContactForm_content__wIV5x {
+    max-width: none;
+  }
+}
+
+/*!***************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./components/Hero/Hero.module.css ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************/
+.Hero_hero__Q5FaL {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--obsidian);
+  padding: 120px 0 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.Hero_heroVideo__whufd {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.6;
+}
+
+.Hero_heroOverlay__JmOcA {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(15, 15, 15, 0.7) 0%, rgba(15, 15, 15, 0.4) 100%);
+}
+
+.Hero_heroInner__FdrC2 {
+  position: relative;
+  z-index: 1;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 clamp(16px, 4vw, 48px);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.Hero_heroContent__iAAhl {
+  color: var(--bone);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.Hero_heroTop__9A7ZM {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.Hero_heroHeadline__uR3IN {
+  font-size: clamp(1.75rem, 3.5vw, 3rem);
+  font-weight: 700;
+  line-height: 1.1;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--bone);
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.Hero_heroCtas__sbTmi {
+  display: flex;
+  gap: 12px;
+  flex-shrink: 0;
+  align-items: center;
+}
+
+.Hero_heroSubtext__ZTvEB {
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  color: var(--silver);
+  line-height: 1.7;
+  max-width: 55ch;
+}
+
+@media (max-width: 900px) {
+  .Hero_heroTop__9A7ZM {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    gap: 20px;
+  }
+
+  .Hero_heroCtas__sbTmi {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .Hero_heroTop__9A7ZM {
+    gap: 16px;
+  }
+
+  .Hero_heroCtas__sbTmi {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .Hero_heroCtas__sbTmi a {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/*!***************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./components/Navigation/Navigation.module.css ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************************/
+.Navigation_nav__hP0PW {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 24px 0;
+  transition: background-color var(--transition-smooth), padding var(--transition-smooth);
+}
+
+.Navigation_nav__hP0PW.Navigation_scrolled__kFCB2 {
+  background-color: var(--obsidian);
+  padding: 16px 0;
+}
+
+.Navigation_navInner__bD_I1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.Navigation_logo__qgqmL {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--charcoal);
+  transition: color var(--transition-base);
+}
+
+.Navigation_nav__hP0PW.Navigation_scrolled__kFCB2 .Navigation_logo__qgqmL {
+  color: var(--bone);
+}
+
+.Navigation_navLinks__9A21P {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  list-style: none;
+}
+
+.Navigation_navLinks__9A21P a {
+  color: var(--charcoal);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: color var(--transition-base);
+}
+
+.Navigation_nav__hP0PW.Navigation_scrolled__kFCB2 .Navigation_navLinks__9A21P a {
+  color: var(--bone);
+}
+
+.Navigation_navLinks__9A21P a:hover {
+  color: var(--silver);
+}
+
+.Navigation_navCta__FrrDY {
+  background-color: var(--charcoal);
+  color: var(--bone);
+  padding: 12px 24px;
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  transition: all var(--transition-base);
+  white-space: nowrap;
+}
+
+.Navigation_navCta__FrrDY:hover {
+  background-color: var(--graphite);
+  transform: translateY(-1px);
+}
+
+@media (max-width: 900px) {
+  .Navigation_navLinks__9A21P {
+    display: none;
+  }
+
+  .Navigation_navCta__FrrDY {
+    display: none;
+  }
+}
+
+/*!**********************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./components/ui/Button/Button.module.css ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************************/
+.Button_button__WQ3_h {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 28px;
+  border-radius: var(--radius-sm);
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  transition: all var(--transition-base);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.Button_primary___5QRF {
+  background-color: var(--bone);
+  color: var(--obsidian);
+}
+
+.Button_primary___5QRF:hover {
+  background-color: var(--chalk);
+  transform: translateY(-2px);
+}
+
+.Button_outline__3GOLy {
+  background-color: transparent;
+  color: var(--charcoal);
+  border: 2px solid var(--charcoal);
+}
+
+.Button_outline__3GOLy:hover {
+  background-color: var(--charcoal);
+  color: var(--bone);
+  transform: translateY(-2px);
+}
+
+.Button_outlineLight__ohT1k {
+  background-color: transparent;
+  color: var(--bone);
+  border: 2px solid var(--bone);
+}
+
+.Button_outlineLight__ohT1k:hover {
+  background-color: var(--bone);
+  color: var(--obsidian);
+  transform: translateY(-2px);
+}
+
+/*!*****************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./components/SocialProof/SocialProof.module.css ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************************/
+.SocialProof_socialProof__rRuGy {
+  padding: 48px 0;
+  background-color: var(--bone);
+  border-top: 1px solid var(--smoke);
+  border-bottom: 1px solid var(--smoke);
+}
+
+.SocialProof_inner__WDoM1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 48px;
+  text-align: center;
+}
+
+.SocialProof_stat__6afiy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.SocialProof_statNumber__KJE_U {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--charcoal);
+  letter-spacing: 0.02em;
+}
+
+.SocialProof_statLabel__WUoWA {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--silver);
+}
+
+.SocialProof_divider__REMDK {
+  width: 1px;
+  height: 40px;
+  background-color: var(--smoke);
+}
+
+@media (max-width: 600px) {
+  .SocialProof_inner__WDoM1 {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .SocialProof_divider__REMDK {
+    width: 40px;
+    height: 1px;
+  }
+}
+
+/*!***********************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./components/TreatmentCards/TreatmentCards.module.css ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************************/
+.TreatmentCards_section__k9eQR {
+  padding: clamp(60px, 8vw, 120px) 0;
+  background-color: var(--chalk);
+}
+
+.TreatmentCards_sectionLabel__JeR1w {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--silver);
+  margin-bottom: 16px;
+}
+
+.TreatmentCards_sectionTitle__2m6wS {
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: var(--charcoal);
+  margin-bottom: 60px;
+}
+
+.TreatmentCards_grid__CDKlP {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 24px;
+  gap: 24px;
+}
+
+.TreatmentCards_card__030TZ {
+  background-color: var(--bone);
+  border-radius: var(--radius-md);
+  padding: 0;
+  overflow: hidden;
+  transition: all var(--transition-base);
+}
+
+.TreatmentCards_card__030TZ:hover {
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-4px);
+}
+
+.TreatmentCards_cardImage__6KtEn {
+  aspect-ratio: 16/10;
+  overflow: hidden;
+  background-color: var(--smoke);
+}
+
+.TreatmentCards_cardImage__6KtEn img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-smooth);
+}
+
+.TreatmentCards_card__030TZ:hover .TreatmentCards_cardImage__6KtEn img {
+  transform: scale(1.03);
+}
+
+.TreatmentCards_cardContent__1tPuH {
+  padding: 32px;
+}
+
+.TreatmentCards_cardTitle__1aFiu {
+  font-size: 1.125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--charcoal);
+  margin-bottom: 12px;
+}
+
+.TreatmentCards_cardText___qj8z {
+  font-size: 0.875rem;
+  color: var(--graphite);
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.TreatmentCards_cardLink__RScvF {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--charcoal);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: gap var(--transition-base);
+}
+
+.TreatmentCards_cardLink__RScvF:hover {
+  gap: 12px;
+}
+
+@media (max-width: 900px) {
+  .TreatmentCards_grid__CDKlP {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .TreatmentCards_grid__CDKlP {
+    grid-template-columns: 1fr;
+  }
+}
+
+/*!***************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./components/ValueStack/ValueStack.module.css ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************************/
+.ValueStack_valueStack__dtWey {
+  padding: clamp(60px, 8vw, 120px) 0;
+  background-color: var(--chalk);
+}
+
+.ValueStack_sectionLabel__LvrbJ {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--silver);
+  margin-bottom: 16px;
+}
+
+.ValueStack_sectionTitle__fzS5H {
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: var(--charcoal);
+  margin-bottom: 60px;
+}
+
+.ValueStack_grid__VpcWu {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 24px;
+  gap: 24px;
+}
+
+.ValueStack_card__heD9U {
+  background-color: var(--bone);
+  border-radius: var(--radius-md);
+  padding: 40px 28px;
+  text-align: center;
+  transition: all var(--transition-base);
+}
+
+.ValueStack_card__heD9U:hover {
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-4px);
+}
+
+.ValueStack_icon__QgFMf {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 24px;
+  background-color: var(--chalk);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--charcoal);
+}
+
+.ValueStack_cardTitle__nZz_p {
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--charcoal);
+  margin-bottom: 12px;
+}
+
+.ValueStack_cardText__prvwX {
+  font-size: 0.875rem;
+  color: var(--graphite);
+  line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+  .ValueStack_grid__VpcWu {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .ValueStack_grid__VpcWu {
+    grid-template-columns: 1fr;
+  }
+}
+
+/*!*************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./components/AIPreview/AIPreview.module.css ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************/
+.AIPreview_section__7eHIW {
+  padding: clamp(60px, 8vw, 120px) 0;
+  background-color: var(--bone);
+}
+
+.AIPreview_inner__H_G0V {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: clamp(40px, 6vw, 80px);
+  gap: clamp(40px, 6vw, 80px);
+  align-items: center;
+}
+
+.AIPreview_content__eIkjB {
+  max-width: 520px;
+}
+
+.AIPreview_sectionLabel__u1mBe {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--silver);
+  margin-bottom: 16px;
+}
+
+.AIPreview_title__rjn2b {
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: var(--charcoal);
+  margin-bottom: 24px;
+}
+
+.AIPreview_text__gczp2 {
+  font-size: 1rem;
+  color: var(--graphite);
+  line-height: 1.7;
+  margin-bottom: 32px;
+}
+
+.AIPreview_uploadArea__nPRjS {
+  background-color: var(--chalk);
+  border: 2px dashed var(--smoke);
+  border-radius: var(--radius-md);
+  padding: 48px 32px;
+  text-align: center;
+  transition: all var(--transition-base);
+  cursor: pointer;
+}
+
+.AIPreview_uploadArea__nPRjS:hover {
+  border-color: var(--charcoal);
+  background-color: var(--smoke);
+}
+
+.AIPreview_uploadIcon__2Rd_G {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 16px;
+  color: var(--charcoal);
+}
+
+.AIPreview_uploadTitle___lEE_ {
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--charcoal);
+  margin-bottom: 8px;
+}
+
+.AIPreview_uploadText__6y8i6 {
+  font-size: 0.875rem;
+  color: var(--silver);
+}
+
+.AIPreview_visual__yw9ud {
+  position: relative;
+  aspect-ratio: 1;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--smoke) 0%, var(--bone) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.AIPreview_visualContent__mvXa_ {
+  text-align: center;
+  padding: 40px;
+}
+
+.AIPreview_visualIcon__GUs9d {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 24px;
+  color: var(--charcoal);
+  opacity: 0.3;
+}
+
+.AIPreview_visualText__BG_Gm {
+  font-size: 0.875rem;
+  color: var(--silver);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+@media (max-width: 900px) {
+  .AIPreview_inner__H_G0V {
+    grid-template-columns: 1fr;
+  }
+
+  .AIPreview_visual__yw9ud {
+    order: -1;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .AIPreview_content__eIkjB {
+    max-width: none;
+    text-align: center;
+  }
+}
+
+/*!*******************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./components/Footer/Footer.module.css ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************/
+.Footer_footer__o4_Ec {
+  background-color: var(--obsidian);
+  padding: clamp(60px, 8vw, 100px) 0 40px;
+  color: var(--bone);
+}
+
+.Footer_footerTop__fJklH {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  grid-gap: clamp(32px, 5vw, 60px);
+  gap: clamp(32px, 5vw, 60px);
+  margin-bottom: 60px;
+}
+
+.Footer_footerBrand__ZSmlv h3 {
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  color: var(--bone);
+}
+
+.Footer_footerBrand__ZSmlv p {
+  font-size: 0.875rem;
+  color: var(--silver);
+  line-height: 1.7;
+  max-width: 280px;
+}
+
+.Footer_footerCol__TINOL h4 {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--silver);
+  margin-bottom: 24px;
+}
+
+.Footer_footerCol__TINOL ul {
+  list-style: none;
+}
+
+.Footer_footerCol__TINOL li {
+  margin-bottom: 14px;
+}
+
+.Footer_footerCol__TINOL a {
+  font-size: 0.875rem;
+  color: var(--silver);
+  transition: color var(--transition-base);
+}
+
+.Footer_footerCol__TINOL a:hover {
+  color: var(--bone);
+}
+
+.Footer_footerCta__gnXpo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.Footer_footerCta__gnXpo p {
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--bone);
+}
+
+.Footer_whatsappBtn__OtQf5 {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--bone);
+  color: var(--obsidian);
+  padding: 14px 28px;
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  transition: all var(--transition-base);
+}
+
+.Footer_whatsappBtn__OtQf5:hover {
+  background-color: var(--chalk);
+  transform: translateY(-2px);
+}
+
+.Footer_footerBottom__KjW7F {
+  border-top: 1px solid rgba(250, 249, 247, 0.08);
+  padding-top: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.75rem;
+  color: var(--silver);
+}
+
+@media (max-width: 900px) {
+  .Footer_footerTop__fJklH {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+
+  .Footer_footerBrand__ZSmlv {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 500px) {
+  .Footer_footerTop__fJklH {
+    grid-template-columns: 1fr;
+  }
+
+  .Footer_footerBottom__KjW7F {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+}
+

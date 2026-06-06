@@ -14,12 +14,12 @@
 }
 
 .primary {
-  background-color: var(--charcoal);
-  color: var(--bone);
+  background-color: var(--bone);
+  color: var(--obsidian);
 }
 
 .primary:hover {
-  background-color: var(--graphite);
+  background-color: var(--chalk);
   transform: translateY(-2px);
 }
 
