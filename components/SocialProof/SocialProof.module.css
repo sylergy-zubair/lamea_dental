@@ -1,0 +1,54 @@
+.socialProof {
+  padding: 48px 0;
+  background-color: var(--bone);
+  border-top: 1px solid var(--smoke);
+  border-bottom: 1px solid var(--smoke);
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 48px;
+  text-align: center;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.statNumber {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--charcoal);
+  letter-spacing: 0.02em;
+}
+
+.statLabel {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--silver);
+}
+
+.divider {
+  width: 1px;
+  height: 40px;
+  background-color: var(--smoke);
+}
+
+@media (max-width: 600px) {
+  .inner {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .divider {
+    width: 40px;
+    height: 1px;
+  }
+}

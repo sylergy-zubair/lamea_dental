@@ -1,0 +1,141 @@
+.section {
+  padding: clamp(60px, 8vw, 120px) 0;
+  background-color: var(--chalk);
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: clamp(40px, 6vw, 80px);
+  align-items: start;
+}
+
+.content {
+  max-width: 480px;
+}
+
+.sectionLabel {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--silver);
+  margin-bottom: 16px;
+}
+
+.title {
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: var(--charcoal);
+  margin-bottom: 24px;
+}
+
+.text {
+  font-size: 1rem;
+  color: var(--graphite);
+  line-height: 1.7;
+  margin-bottom: 32px;
+}
+
+.contactDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.875rem;
+  color: var(--graphite);
+}
+
+.contactIcon {
+  width: 20px;
+  height: 20px;
+  color: var(--charcoal);
+  flex-shrink: 0;
+}
+
+.form {
+  background-color: var(--bone);
+  border-radius: var(--radius-lg);
+  padding: clamp(32px, 4vw, 48px);
+}
+
+.formGroup {
+  margin-bottom: 20px;
+}
+
+.label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--charcoal);
+  margin-bottom: 8px;
+}
+
+.input,
+.textarea {
+  width: 100%;
+  padding: 14px 16px;
+  font-size: 0.875rem;
+  font-family: inherit;
+  color: var(--graphite);
+  background-color: var(--chalk);
+  border: 1px solid var(--smoke);
+  border-radius: var(--radius-sm);
+  transition: border-color var(--transition-base);
+}
+
+.input:focus,
+.textarea:focus {
+  outline: none;
+  border-color: var(--charcoal);
+}
+
+.input::placeholder,
+.textarea::placeholder {
+  color: var(--silver);
+}
+
+.textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.submit {
+  width: 100%;
+  padding: 16px 28px;
+  background-color: var(--charcoal);
+  color: var(--bone);
+  font-size: 0.875rem;
+  font-weight: 600;
+  font-family: inherit;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+
+.submit:hover {
+  background-color: var(--graphite);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 900px) {
+  .inner {
+    grid-template-columns: 1fr;
+  }
+
+  .content {
+    max-width: none;
+  }
+}

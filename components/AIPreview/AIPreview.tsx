@@ -1,0 +1,41 @@
+import styles from './AIPreview.module.css';
+import Button from '@/components/ui/Button/Button';
+
+export default function AIPreview() {
+  return (
+    <section className={styles.section} id="preview">
+      <div className={`container ${styles.inner}`}>
+        <div className={styles.content}>
+          <p className={styles.sectionLabel}>AI Smile Preview</p>
+          <h2 className={styles.title}>See Your New Smile Before You Commit</h2>
+          <p className={styles.text}>
+            Upload a photo of your current smile. Our AI analyzes your facial structure
+            and generates a preview of your potential results. No commitment, no pressure.
+            Just a glimpse of what's possible.
+          </p>
+          <div className={styles.uploadArea}>
+            <div className={styles.uploadIcon}>
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.5">
+                <circle cx="24" cy="24" r="20" />
+                <path d="M24 14v20M14 24h20" strokeLinecap="round" />
+              </svg>
+            </div>
+            <p className={styles.uploadTitle}>Upload Your Smile</p>
+            <p className={styles.uploadText}>JPG or PNG, max 10MB</p>
+          </div>
+        </div>
+        <div className={styles.visual}>
+          <div className={styles.visualContent}>
+            <div className={styles.visualIcon}>
+              <svg viewBox="0 0 80 80" fill="none" stroke="currentColor" strokeWidth="1.5">
+                <circle cx="40" cy="40" r="36" />
+                <path d="M40 20v40M20 40h40" strokeLinecap="round" />
+              </svg>
+            </div>
+            <p className={styles.visualText}>AI Preview Placeholder</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}

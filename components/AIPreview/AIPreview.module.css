@@ -1,0 +1,124 @@
+.section {
+  padding: clamp(60px, 8vw, 120px) 0;
+  background-color: var(--bone);
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(40px, 6vw, 80px);
+  align-items: center;
+}
+
+.content {
+  max-width: 520px;
+}
+
+.sectionLabel {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--silver);
+  margin-bottom: 16px;
+}
+
+.title {
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: var(--charcoal);
+  margin-bottom: 24px;
+}
+
+.text {
+  font-size: 1rem;
+  color: var(--graphite);
+  line-height: 1.7;
+  margin-bottom: 32px;
+}
+
+.uploadArea {
+  background-color: var(--chalk);
+  border: 2px dashed var(--smoke);
+  border-radius: var(--radius-md);
+  padding: 48px 32px;
+  text-align: center;
+  transition: all var(--transition-base);
+  cursor: pointer;
+}
+
+.uploadArea:hover {
+  border-color: var(--charcoal);
+  background-color: var(--smoke);
+}
+
+.uploadIcon {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 16px;
+  color: var(--charcoal);
+}
+
+.uploadTitle {
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--charcoal);
+  margin-bottom: 8px;
+}
+
+.uploadText {
+  font-size: 0.875rem;
+  color: var(--silver);
+}
+
+.visual {
+  position: relative;
+  aspect-ratio: 1;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--smoke) 0%, var(--bone) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.visualContent {
+  text-align: center;
+  padding: 40px;
+}
+
+.visualIcon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 24px;
+  color: var(--charcoal);
+  opacity: 0.3;
+}
+
+.visualText {
+  font-size: 0.875rem;
+  color: var(--silver);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+@media (max-width: 900px) {
+  .inner {
+    grid-template-columns: 1fr;
+  }
+
+  .visual {
+    order: -1;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .content {
+    max-width: none;
+    text-align: center;
+  }
+}
