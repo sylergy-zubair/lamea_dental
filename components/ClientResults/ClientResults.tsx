@@ -27,19 +27,13 @@ export default function ClientResults() {
       <h2 className={styles.heading}>Client Results</h2>
       <div className={styles.line} />
       <div className={styles.galleryWrapper}>
-        <ul className={styles.gallery}>
-          {results.map((result, i) => (
-            <li key={i}>
-              <div className={styles.imageWrapper}>
-                <img
-                  src={result.src}
-                  alt={result.alt}
-                  loading="lazy"
- />
-              </div>
-            </li>
+        <div className={styles.galleryTrack}>
+          {[...results, ...results].map((result, i) => (
+            <div key={i} className={styles.imageWrapper}>
+              <img src={result.src} alt={result.alt} loading="lazy" />
+            </div>
           ))}
-        </ul>
+        </div>
       </div>
       <p className={styles.disclaimer}>*Results may vary</p>
       <a href="/results" className={styles.seeMoreLink}>
