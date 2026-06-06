@@ -1,4 +1,5 @@
 import styles from './Hero.module.css';
+import Button from '../ui/Button/Button';
 
 export default function Hero() {
   return (
@@ -14,8 +15,8 @@ export default function Hero() {
             See your new smile before you commit — with our AI preview.
           </p>
           <div className={styles.heroCtas}>
-            <a href="#consultation" className="btn btn-primary">Start Consultation</a>
-            <a href="#preview" className="btn btn-outline">Upload Your Smile</a>
+            <Button href="#consultation" variant="primary">Start Consultation</Button>
+            <Button href="#preview" variant="outline">Upload Your Smile</Button>
           </div>
         </div>
         <div className={styles.heroImage}>
