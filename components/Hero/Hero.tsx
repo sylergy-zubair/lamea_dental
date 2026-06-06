@@ -29,8 +29,8 @@ export default function Hero() {
             </div>
           </div>
           <p className={styles.heroSubtext}>
-            Bring your smile to light.
-          </p>
+            THE SMILE IS OURS . THE WORLD IS YOURS
+</p>
         </div>
       </div>
     </section>
