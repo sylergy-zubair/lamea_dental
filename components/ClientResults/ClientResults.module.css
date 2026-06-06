@@ -1,0 +1,94 @@
+.clientResults {
+  padding: 80px 0;
+  text-align: center;
+  background: #faf9f7;
+}
+
+.heading {
+  font-family: var(--font-serif), Georgia, serif;
+  font-size: 2rem;
+  font-weight: 400;
+  color: #7c7865;
+  margin: 0 0 24px 0;
+  letter-spacing: 0.02em;
+}
+
+.line {
+  width: 60px;
+  height: 1px;
+  background: #7c7865;
+  margin: 0 auto 40px auto;
+}
+
+.galleryWrapper {
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding: 0 20px;
+}
+
+.galleryWrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.gallery {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  justify-content: flex-start;
+}
+
+.imageWrapper {
+  width: 350px;
+  flex-shrink: 0;
+  aspect-ratio: 0.8;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.imageWrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.disclaimer {
+  font-size: 0.875rem;
+  color: #7c7865;
+  margin: 32px 0 24px 0;
+}
+
+.seeMoreLink {
+  display: inline-block;
+  padding: 12px 24px;
+  border: 1px solid #34332b;
+  border-radius: 5px;
+  color: #34332b;
+  text-decoration: none;
+  font-size: 0.9375rem;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.seeMoreLink:hover {
+  background-color: #34332b;
+  color: #faf9f7;
+}
+
+@media (max-width: 768px) {
+  .clientResults {
+    padding: 60px 0;
+  }
+
+  .imageWrapper {
+    width: 280px;
+  }
+
+  .gallery {
+    gap: 20px;
+  }
+}
