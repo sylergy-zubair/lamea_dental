@@ -1,6 +1,12 @@
 import styles from './ValueStack.module.css';
 
-const values = [
+interface Value {
+  icon: string;
+  title: string;
+  text: string;
+}
+
+const values: Value[] = [
   {
     icon: '£',
     title: 'Transparent Pricing',
