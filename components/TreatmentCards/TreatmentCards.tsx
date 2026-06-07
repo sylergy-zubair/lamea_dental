@@ -1,4 +1,5 @@
 import styles from './TreatmentCards.module.css';
+import Image from 'next/image';
 
 const treatments = [
   {
@@ -32,7 +33,13 @@ export default function TreatmentCards() {
           {treatments.map((treatment) => (
             <a href={treatment.href} key={treatment.title} className={styles.card}>
               <div className={styles.cardImage}>
-                <img src={treatment.image} alt={treatment.title} />
+                <Image
+                  src={treatment.image}
+                  alt={treatment.title}
+                  fill
+                  className={styles.cardImageImg}
+                  sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
+                />
               </div>
               <div className={styles.cardContent}>
                 <h3 className={styles.cardTitle}>{treatment.title}</h3>

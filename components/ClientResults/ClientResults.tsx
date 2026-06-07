@@ -1,4 +1,5 @@
 import styles from './ClientResults.module.css';
+import Image from 'next/image';
 
 const results = [
   { src: '/results/5ZFBfCDx1EXAgDqlWZQgIoyyoXQ.jpeg', alt: 'Client smile result 1' },
@@ -30,7 +31,14 @@ export default function ClientResults() {
         <div className={styles.galleryTrack}>
           {[...results, ...results].map((result, i) => (
             <div key={i} className={styles.imageWrapper}>
-              <img src={result.src} alt={result.alt} loading="lazy" />
+              <Image
+                src={result.src}
+                alt={result.alt}
+                fill
+                className={styles.resultImage}
+                sizes="350px"
+                loading="lazy"
+              />
             </div>
           ))}
         </div>

@@ -1,5 +1,5 @@
 import styles from './AIPreview.module.css';
-import Button from '@/components/ui/Button/Button';
+import Image from 'next/image';
 
 export default function AIPreview() {
   return (
@@ -12,7 +12,7 @@ export default function AIPreview() {
           <p className={styles.text}>
             Upload a photo of your current smile. Our AI analyzes your facial structure
             and generates a preview of your potential results. No commitment, no pressure.
-            Just a glimpse of what's possible.
+            Just a glimpse of what&apos;s possible.
           </p>
           <div className={styles.uploadArea}>
             <div className={styles.uploadIcon}>
@@ -27,7 +27,13 @@ export default function AIPreview() {
         </div>
         <div className={styles.visual}>
           <div className={styles.visualContent}>
-            <img src="/images/ai-placeholder.jpg" alt="AI Smile Preview Placeholder" className={styles.visualImage} />
+            <Image
+              src="/images/ai-placeholder.jpg"
+              alt="AI Smile Preview Placeholder"
+              fill
+              className={styles.visualImage}
+              sizes="(max-width: 900px) 500px, 50vw"
+            />
           </div>
         </div>
       </div>

@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
 import styles from './Navigation.module.css';
 
 const navLinks = [
@@ -23,7 +24,14 @@ export default function Navigation() {
     <nav className={`${styles.nav} ${scrolled ? styles.scrolled : ''}`}>
       <div className={`container ${styles.navInner}`}>
         <a href="/" className={styles.logo}>
-          <img src="/images/logo.png" alt="Lamea Dental" className={styles.logoImage} />
+          <Image
+            src="/images/logo.png"
+            alt="Lamea Dental"
+            width={120}
+            height={32}
+            className={styles.logoImage}
+            priority
+          />
         </a>
         <ul className={styles.navLinks}>
           {navLinks.map((link) => (
