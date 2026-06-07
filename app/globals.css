@@ -2,7 +2,7 @@
 :root {
   --obsidian: #0f0f0f;
   --chalk: #f5f3ef;
-  --bone: #faf9f7;
+  --bone: #f5ecd6;
   --graphite: #2a2a2a;
   --charcoal: #3d3d3d;
   --silver: #9a9a9a;
@@ -22,7 +22,9 @@
 }
 
 /* Reset */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -59,10 +61,13 @@ button {
 }
 
 /* Typography scale */
-h1, h2, h3 {
+h1,
+h2,
+h3 {
+  font-family: var(--font-heading), 'Bricolage Grotesque', system-ui, sans-serif;
   text-wrap: balance;
   font-weight: 700;
-  letter-spacing:0.02em;
+  letter-spacing: 0.02em;
 }
 
 h1 {

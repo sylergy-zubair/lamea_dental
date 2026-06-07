@@ -27,13 +27,7 @@ export default function AIPreview() {
         </div>
         <div className={styles.visual}>
           <div className={styles.visualContent}>
-            <div className={styles.visualIcon}>
-              <svg viewBox="0 0 80 80" fill="none" stroke="currentColor" strokeWidth="1.5">
-                <circle cx="40" cy="40" r="36" />
-                <path d="M40 20v40M20 40h40" strokeLinecap="round" />
-              </svg>
-            </div>
-            <p className={styles.visualText}>AI Preview Placeholder</p>
+            <img src="/images/ai-placeholder.jpg" alt="AI Smile Preview Placeholder" className={styles.visualImage} />
           </div>
         </div>
       </div>

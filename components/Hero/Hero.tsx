@@ -17,7 +17,7 @@ export default function Hero() {
         <div className={styles.heroContent}>
           <div className={styles.heroTop}>
             <h1 className={styles.heroHeadline}>
-              Excellence in Cosmetic Dentistry.
+              THE SMILE IS OURS  THE WORLD IS YOURS
             </h1>
             <div className={styles.heroCtas}>
               <Button href="#consultation" variant="primary">
@@ -30,7 +30,7 @@ export default function Hero() {
           </div>
           <p className={styles.heroSubtext}>
             THE SMILE IS OURS . THE WORLD IS YOURS
-</p>
+          </p>
         </div>
       </div>
     </section>

@@ -13,10 +13,10 @@ export default function Home() {
     <main>
       <Navigation />
       <Hero />
-      <SocialProof />
+      <ValueStack />
       <ClientResults />
       <TreatmentCards />
-      <ValueStack />
+      <SocialProof />
       <AIPreview />
       <ContactForm />
       <Footer />

@@ -61,9 +61,10 @@
 }
 
 .form {
-  background-color: var(--bone);
-  border-radius: var(--radius-lg);
+  background-color: var(--chalk);
+  border-radius: var(--radius-sm);
   padding: clamp(32px, 4vw, 48px);
+  border: 1px solid var(--charcoal);
 }
 
 .formGroup {
@@ -88,7 +89,7 @@
   font-family: inherit;
   color: var(--graphite);
   background-color: var(--chalk);
-  border: 1px solid var(--smoke);
+  border: 1px solid var(--obsidian);
   border-radius: var(--radius-sm);
   transition: border-color var(--transition-base);
 }

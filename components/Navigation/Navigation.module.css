@@ -21,16 +21,20 @@
 }
 
 .logo {
-  font-size: 1rem;
-  font-weight: 700;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--charcoal);
-  transition: color var(--transition-base);
+  display: flex;
+  align-items: center;
+  transition: opacity var(--transition-base);
 }
 
-.nav.scrolled .logo {
-  color: var(--bone);
+.logoImage {
+  height: 32px;
+  width: auto;
+  transition: filter var(--transition-smooth);
+}
+
+.nav.scrolled .logoImage {
+  /* Assuming the original logo is dark, this makes it white when nav is dark */
+  filter: brightness(0) invert(1);
 }
 
 .navLinks {

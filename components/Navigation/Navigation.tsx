@@ -22,7 +22,9 @@ export default function Navigation() {
   return (
     <nav className={`${styles.nav} ${scrolled ? styles.scrolled : ''}`}>
       <div className={`container ${styles.navInner}`}>
-        <a href="/" className={styles.logo}>LAMEA DENTAL</a>
+        <a href="/" className={styles.logo}>
+          <img src="/images/logo.png" alt="Lamea Dental" className={styles.logoImage} />
+        </a>
         <ul className={styles.navLinks}>
           {navLinks.map((link) => (
             <li key={link.href}>

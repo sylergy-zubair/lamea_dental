@@ -18,7 +18,7 @@
   grid-template-columns: repeat(4, 1fr);
   background-color: #ffffff;
   padding: 64px 0;
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-sm);
   box-shadow: var(--shadow-card);
   border: 1px solid var(--smoke);
   transition: box-shadow var(--transition-smooth), transform var(--transition-smooth);

@@ -4,19 +4,19 @@ const treatments = [
   {
     title: 'Composite Bonding',
     text: 'Transform gaps, chips, and discoloration with precision-crafted composite resin. Natural-looking results in a single visit.',
-    image: 'https://images.unsplash.com/photo-1606811841681-b73b2558f2d6?w=600&q=80',
+    image: '/images/bonding.jpg',
     href: '#bonding',
   },
   {
     title: 'Teeth Whitening',
     text: 'Professional whitening that lifts stains safely and effectively. Take-home or in-chair options available.',
-    image: 'https://images.unsplash.com/photo-1606265752439-1f18756a5c94?w=600&q=80',
+    image: '/images/whitening.jpg',
     href: '#whitening',
   },
   {
     title: 'Smile Makeover',
     text: 'A complete transformation combining multiple treatments for a fully rejuvenated smile.',
-    image: 'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=600&q=80',
+    image: '/images/makeover.jpg',
     href: '#makeover',
   },
 ];

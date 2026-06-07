@@ -1,43 +1,86 @@
+'use client';
+
+import { useEffect, useRef, useState } from 'react';
 import styles from './ValueStack.module.css';
 
 interface Value {
-  icon: string;
+  icon: React.ReactNode;
   title: string;
   text: string;
 }
 
 const values: Value[] = [
   {
-    icon: '£',
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+        <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" strokeLinecap="round" strokeLinejoin="round"/>
+      </svg>
+    ),
     title: 'Transparent Pricing',
     text: 'No hidden fees. Clear costs per tooth upfront.',
   },
   {
-    icon: '✨',
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+        <path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 1 1 7.072 0l-.548.547A3.374 3.374 0 0 0 14 18.469V19a2 2 0 1 1-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" strokeLinecap="round" strokeLinejoin="round"/>
+      </svg>
+    ),
     title: 'AI Smile Preview',
     text: 'See your new smile before you commit.',
   },
   {
-    icon: '⚕',
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" strokeLinecap="round" strokeLinejoin="round"/>
+        <path d="M9 12l2 2 4-4" strokeLinecap="round" strokeLinejoin="round"/>
+      </svg>
+    ),
     title: 'Expert Clinicians',
     text: 'Years of composite bonding experience.',
   },
   {
-    icon: '⚡',
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" strokeLinecap="round" strokeLinejoin="round"/>
+      </svg>
+    ),
     title: 'Same-Day Results',
     text: 'Walk out with your new smile today.',
   },
 ];
 
 export default function ValueStack() {
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <section className={styles.valueStack} id="values">
+    <section ref={sectionRef} className={`${styles.valueStack} ${isVisible ? styles.visible : ''}`} id="values">
       <div className="container">
-        <p className={styles.sectionLabel}>Why Lamea Dental</p>
-        <h2 className={styles.sectionTitle}>Confidence, Simplified</h2>
+        <div className={styles.header}>
+          <p className={styles.sectionLabel}>Why Lamea Dental</p>
+          <h2 className={styles.sectionTitle}>Confidence, Simplified</h2>
+        </div>
         <div className={styles.grid}>
-          {values.map((value) => (
-            <div key={value.title} className={styles.card}>
+          {values.map((value, i) => (
+            <div key={value.title} className={styles.card} style={{ '--delay': `${i * 0.15}s` } as React.CSSProperties}>
               <div className={styles.icon}>{value.icon}</div>
               <h3 className={styles.cardTitle}>{value.title}</h3>
               <p className={styles.cardText}>{value.text}</p>
