@@ -28,7 +28,7 @@
 .galleryTrack {
   display: flex;
   gap: 30px;
-  animation: scrollLeft 30s linear infinite;
+  animation: scrollLeft 80s linear infinite;
   width: max-content;
 }
 
@@ -37,7 +37,7 @@
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translateX(-100%);
   }
 }
 

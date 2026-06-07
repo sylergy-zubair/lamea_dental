@@ -24,7 +24,8 @@ const treatments = [
 export default function TreatmentCards() {
   return (
     <section className={styles.section} id="treatments">
-      <div className="container">
+      <div className={styles.overlay} />
+      <div className={`container ${styles.content}`}>
         <p className={styles.sectionLabel}>Treatments</p>
         <h2 className={styles.sectionTitle}>What We Offer</h2>
         <div className={styles.grid}>

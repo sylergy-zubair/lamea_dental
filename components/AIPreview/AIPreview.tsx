@@ -4,6 +4,7 @@ import Button from '@/components/ui/Button/Button';
 export default function AIPreview() {
   return (
     <section className={styles.section} id="preview">
+      <div className={styles.overlay} />
       <div className={`container ${styles.inner}`}>
         <div className={styles.content}>
           <p className={styles.sectionLabel}>AI Smile Preview</p>

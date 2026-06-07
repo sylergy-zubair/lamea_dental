@@ -1,6 +1,22 @@
 .section {
   padding: clamp(60px, 8vw, 120px) 0;
   background-color: var(--bone);
+  background-image: url('/images/aisection.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(250, 249, 247, 0.55);
+  /* var(--bone) with opacity */
+  z-index: 0;
 }
 
 .inner {
@@ -8,6 +24,8 @@
   grid-template-columns: 1fr 1fr;
   gap: clamp(40px, 6vw, 80px);
   align-items: center;
+  position: relative;
+  z-index: 1;
 }
 
 .content {
