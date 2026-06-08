@@ -91,3 +91,56 @@
   color: var(--graphite);
   line-height: 1.75;
 }
+
+.facilities {
+  margin-bottom: clamp(60px, 8vw, 120px);
+  padding-bottom: clamp(40px, 6vw, 80px);
+  border-bottom: 1px solid var(--smoke);
+}
+
+.facilitiesLabel {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--charcoal);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 2rem;
+}
+
+.facilitiesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(16px, 3vw, 32px);
+}
+
+.facilityItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.facilityImage {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  background-color: var(--smoke);
+}
+
+.facilityCaption {
+  font-size: 0.875rem;
+  color: var(--graphite);
+  line-height: 1.5;
+}
+
+@media (max-width: 700px) {
+  .philosophy {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .facilitiesGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}

@@ -49,6 +49,42 @@ export default function AboutPage() {
             </p>
           </div>
         </section>
+
+        <section className={styles.facilities}>
+          <span className={styles.facilitiesLabel}>Our Space</span>
+          <div className={styles.facilitiesGrid}>
+            <div className={styles.facilityItem}>
+              <img
+                src="https://picsum.photos/seed/lamea-clinic-1/800/600"
+                alt="Lamea Dental treatment room"
+                className={styles.facilityImage}
+              />
+              <p className={styles.facilityCaption}>
+                Modern treatment room with natural light
+              </p>
+            </div>
+            <div className={styles.facilityItem}>
+              <img
+                src="https://picsum.photos/seed/lamea-clinic-2/800/600"
+                alt="Lamea Dental reception area"
+                className={styles.facilityImage}
+              />
+              <p className={styles.facilityCaption}>
+                Warm, welcoming reception — no clinical feel
+              </p>
+            </div>
+            <div className={styles.facilityItem}>
+              <img
+                src="https://picsum.photos/seed/lamea-clinic-3/800/600"
+                alt="Lamea Dental consultation space"
+                className={styles.facilityImage}
+              />
+              <p className={styles.facilityCaption}>
+                Private consultation space for honest conversations
+              </p>
+            </div>
+          </div>
+        </section>
       </div>
     </main>
   );
