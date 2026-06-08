@@ -85,6 +85,15 @@ export default function AboutPage() {
             </div>
           </div>
         </section>
+
+        <section className={styles.cta}>
+          <p className={styles.ctaText}>
+            Ready to see what we can do for you?
+          </p>
+          <a href="https://wa.me/447700000000" className={styles.ctaButton}>
+            Start with WhatsApp
+          </a>
+        </section>
       </div>
     </main>
   );
