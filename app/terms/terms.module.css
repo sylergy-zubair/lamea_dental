@@ -9,52 +9,89 @@
 }
 
 .back {
-  display: inline-block;
-  margin-bottom: 2rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 2.5rem;
   color: var(--charcoal);
-  font-size: 0.875rem;
-  transition: opacity 0.2s ease;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  transition: opacity 0.2s ease, gap 0.2s ease;
+}
+
+.back::before {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 1px;
+  background-color: var(--charcoal);
+  transition: width 0.2s ease;
 }
 
 .back:hover {
   opacity: 0.7;
 }
 
+.back:hover::before {
+  width: 28px;
+}
+
 .title {
   font-size: clamp(2rem, 4vw, 3rem);
   color: var(--charcoal);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
 }
 
 .lastUpdated {
   color: var(--silver);
-  font-size: 0.875rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
   margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--smoke);
 }
 
 .section {
-  margin-bottom: 2.5rem;
+  padding: 2rem 0;
+  border-bottom: 1px solid var(--smoke);
+}
+
+.section:last-of-type {
+  border-bottom: none;
 }
 
 .section h2 {
-  font-size: 1rem;
+  font-size: 0.7rem;
+  font-weight: 600;
   color: var(--charcoal);
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
   text-transform: uppercase;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.12em;
 }
 
 .section p {
   color: var(--graphite);
-  line-height: 1.7;
+  line-height: 1.75;
   margin-bottom: 1rem;
 }
 
 .section a {
   color: var(--charcoal);
   text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: opacity 0.2s ease;
 }
 
 .section a:hover {
   opacity: 0.7;
+}
+
+.section a:focus-visible {
+  outline: 2px solid var(--charcoal);
+  outline-offset: 3px;
+  border-radius: 2px;
 }

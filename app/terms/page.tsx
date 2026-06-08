@@ -12,7 +12,7 @@ export default function TermsPage() {
     <main className={styles.page}>
       <div className={`container ${styles.container}`}>
         <Link href="/" className={styles.back}>
-          ← Back to home
+          Back to home
         </Link>
 
         <h1 className={styles.title}>Terms and Conditions</h1>
