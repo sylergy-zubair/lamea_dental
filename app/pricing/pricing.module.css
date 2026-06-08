@@ -68,3 +68,145 @@
   color: var(--silver);
   font-style: italic;
 }
+
+.treatmentGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: clamp(20px, 3vw, 32px);
+  margin-bottom: clamp(60px, 8vw, 120px);
+  padding-bottom: clamp(40px, 6vw, 80px);
+  border-bottom: 1px solid var(--smoke);
+}
+
+.treatmentCard {
+  background-color: var(--bone);
+  border: 1px solid var(--smoke);
+  border-radius: var(--radius-sm);
+  padding: 1.75rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.treatmentCard:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+
+.treatmentName {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--charcoal);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 0.5rem;
+}
+
+.treatmentPrice {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--charcoal);
+  margin-bottom: 0.75rem;
+  line-height: 1.2;
+}
+
+.treatmentIncludes {
+  font-size: 0.875rem;
+  color: var(--graphite);
+  line-height: 1.6;
+}
+
+.consultation {
+  background-color: var(--smoke);
+  border-radius: var(--radius-md);
+  padding: clamp(24px, 4vw, 40px);
+  margin-bottom: clamp(60px, 8vw, 120px);
+  border-bottom: 1px solid var(--smoke);
+}
+
+.consultationLabel {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--charcoal);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 0.75rem;
+}
+
+.consultationTitle {
+  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+  font-weight: 700;
+  color: var(--charcoal);
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+.consultationFee {
+  font-size: 1rem;
+  color: var(--graphite);
+  margin-bottom: 1rem;
+}
+
+.consultationIncludes {
+  font-size: 0.875rem;
+  color: var(--graphite);
+  line-height: 1.7;
+  margin-bottom: 1.25rem;
+}
+
+.consultationBook {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--charcoal);
+  color: var(--bone);
+  padding: 12px 24px;
+  border-radius: var(--radius-sm);
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  transition: all var(--transition-base);
+}
+
+.consultationBook:hover {
+  background-color: var(--graphite);
+  transform: translateY(-2px);
+}
+
+.cta {
+  text-align: center;
+  padding: clamp(40px, 6vw, 80px) 0 clamp(60px, 8vw, 120px);
+}
+
+.ctaText {
+  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+  color: var(--charcoal);
+  font-weight: 700;
+  margin-bottom: 2rem;
+  line-height: 1.3;
+}
+
+.ctaButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--charcoal);
+  color: var(--bone);
+  padding: 16px 32px;
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  transition: all var(--transition-base);
+}
+
+.ctaButton:hover {
+  background-color: var(--graphite);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+  .treatmentGrid {
+    grid-template-columns: 1fr;
+  }
+}
