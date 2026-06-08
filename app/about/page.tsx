@@ -21,6 +21,34 @@ export default function AboutPage() {
             is built around one idea: you deserve to feel confident.
           </p>
         </section>
+
+        <section className={styles.philosophy}>
+          <span className={styles.philosophyLabel}>Philosophy</span>
+          <div className={styles.philosophyContent}>
+            <p>
+              We don&apos;t upsell. If composite bonding isn&apos;t the right fit for you,
+              we&apos;ll tell you — and explain exactly why. Our goal is not to fill
+              appointment slots; it&apos;s to build trust that keeps you coming back
+              when you need us.
+            </p>
+            <p>
+              Every smile is different. We take time to understand what you want to
+              achieve, not just what you came in asking for. That means honest
+              conversations about what&apos;s realistic, what the process looks like,
+              and what you can expect afterward.
+            </p>
+            <p>
+              Results should look natural. Not &ldquo;done.&rdquo; The best work is the
+              work nobody can pinpoint — just a sense that something shifted, and you
+              feel better.
+            </p>
+            <p>
+              We&apos;re here when you need us. Aftercare isn&apos;t an afterthought;
+              it&apos;s part of the service. If something doesn&apos;t feel right after
+              you leave, reach out. We stay in touch.
+            </p>
+          </div>
+        </section>
       </div>
     </main>
   );

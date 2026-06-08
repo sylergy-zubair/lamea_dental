@@ -61,3 +61,33 @@
   line-height: 1.75;
   max-width: 55ch;
 }
+
+.philosophy {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: clamp(32px, 5vw, 60px);
+  margin-bottom: clamp(60px, 8vw, 120px);
+  padding-bottom: clamp(40px, 6vw, 80px);
+  border-bottom: 1px solid var(--smoke);
+}
+
+.philosophyLabel {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--charcoal);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  padding-top: 0.25rem;
+}
+
+.philosophyContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.philosophyContent p {
+  font-size: 1rem;
+  color: var(--graphite);
+  line-height: 1.75;
+}
