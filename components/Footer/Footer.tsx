@@ -16,6 +16,10 @@ const footerLinks = {
     { label: 'FAQ', href: '#faq' },
     { label: 'Contact', href: '#contact' },
   ],
+  legal: [
+    { label: 'Privacy Policy', href: '/privacy' },
+    { label: 'Terms & Conditions', href: '/terms' },
+  ],
 };
 
 export default function Footer() {
@@ -43,6 +47,15 @@ export default function Footer() {
           <h4>Company</h4>
           <ul>
             {footerLinks.company.map((link) => (
+              <li key={link.label}><a href={link.href}>{link.label}</a></li>
+            ))}
+          </ul>
+        </div>
+
+        <div className={styles.footerCol}>
+          <h4>Legal</h4>
+          <ul>
+            {footerLinks.legal.map((link) => (
               <li key={link.label}><a href={link.href}>{link.label}</a></li>
             ))}
           </ul>

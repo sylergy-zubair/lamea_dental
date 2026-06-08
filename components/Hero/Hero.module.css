@@ -67,6 +67,63 @@
   align-items: center;
 }
 
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 28px;
+  border-radius: var(--radius-sm);
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  transition: all var(--transition-base);
+  cursor: pointer;
+  white-space: nowrap;
+  font-family: inherit;
+  text-decoration: none;
+}
+
+.outlineLight {
+  background-color: transparent;
+  color: var(--bone);
+  border: 2px solid var(--bone);
+}
+
+.outlineLight:hover {
+  background-color: var(--bone);
+  color: var(--obsidian);
+  transform: translateY(-2px);
+}
+
+.contactDropdown {
+  position: relative;
+  display: inline-flex;
+}
+
+.contactMenu {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px);
+  transition: opacity var(--transition-base), transform var(--transition-base), visibility var(--transition-base);
+  z-index: 10;
+  min-width: 100%;
+  pointer-events: none;
+}
+
+.contactDropdownOpen .contactMenu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
 .heroSubtext {
   font-size: clamp(1rem, 1.5vw, 1.25rem);
   color: var(--silver);
@@ -98,8 +155,25 @@
     width: 100%;
   }
 
-  .heroCtas a {
+  .heroCtas a,
+  .contactTrigger,
+  .contactOption {
     width: 100%;
     justify-content: center;
+  }
+
+  .contactDropdown {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contactMenu {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    pointer-events: auto;
+    margin-top: 10px;
   }
 }
