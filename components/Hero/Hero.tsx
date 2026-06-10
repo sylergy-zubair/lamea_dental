@@ -5,20 +5,20 @@ import styles from './Hero.module.css';
 import Button from '@/components/ui/Button/Button';
 
 export default function Hero() {
-  const [contactOpen, setContactOpen] = useState(false);
+  const [contactSplit, setContactSplit] = useState(false);
   const contactRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (!contactOpen) return;
+    if (!contactSplit) return;
 
     const handleClickOutside = (e: MouseEvent) => {
       if (contactRef.current && !contactRef.current.contains(e.target as Node)) {
-        setContactOpen(false);
+        setContactSplit(false);
       }
     };
 
     const handleEscape = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') setContactOpen(false);
+      if (e.key === 'Escape') setContactSplit(false);
     };
 
     document.addEventListener('mousedown', handleClickOutside);
@@ -27,7 +27,7 @@ export default function Hero() {
       document.removeEventListener('mousedown', handleClickOutside);
       document.removeEventListener('keydown', handleEscape);
     };
-  }, [contactOpen]);
+  }, [contactSplit]);
 
   return (
     <section className={styles.hero}>
@@ -50,35 +50,26 @@ export default function Hero() {
               <Button href="#consultation" variant="primary">
                 Book Your Consultation
               </Button>
-              <div
-                className={`${styles.contactDropdown} ${contactOpen ? styles.contactDropdownOpen : ''}`}
-                ref={contactRef}
-              >
+              <div className={styles.contactWrapper} ref={contactRef}>
                 <button
                   type="button"
-                  className={`${styles.button} ${styles.outlineLight} ${styles.contactTrigger}`}
-                  aria-haspopup="menu"
-                  aria-expanded={contactOpen}
-                  onClick={() => setContactOpen((prev) => !prev)}
+                  className={`${styles.button} ${styles.outlineLight} ${styles.contactTrigger} ${contactSplit ? styles.contactTriggerHidden : ''}`}
+                  onClick={() => setContactSplit(true)}
                 >
                   Contact Us
                 </button>
-                <div className={styles.contactMenu} role="menu">
+                <div className={`${styles.contactSplit} ${contactSplit ? styles.contactSplitOpen : ''}`}>
                   <a
                     href="tel:+447700000000"
                     className={`${styles.button} ${styles.outlineLight} ${styles.contactOption}`}
-                    role="menuitem"
-                    onClick={() => setContactOpen(false)}
                   >
                     Call Us
                   </a>
                   <a
                     href="https://wa.me/447700000000"
                     className={`${styles.button} ${styles.outlineLight} ${styles.contactOption}`}
-                    role="menuitem"
                     target="_blank"
                     rel="noopener noreferrer"
-                    onClick={() => setContactOpen(false)}
                   >
                     WhatsApp
                   </a>
@@ -87,7 +78,8 @@ export default function Hero() {
             </div>
           </div>
           <p className={styles.heroSubtext}>
-            
+            Expert composite bonding in London. Transparent pricing, AI preview,
+            and same-day results — no commitment required.
           </p>
         </div>
       </div>

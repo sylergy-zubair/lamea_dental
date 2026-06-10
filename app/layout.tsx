@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import { Inter, Bricolage_Grotesque } from 'next/font/google';
 import './globals.css';
+import Navigation from '@/components/Navigation/Navigation';
+import Footer from '@/components/Footer/Footer';
 import WhatsAppBubble from '@/components/WhatsAppBubble/WhatsAppBubble';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -19,7 +21,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} ${bricolage.variable}`}>
+        <Navigation />
         {children}
+        <Footer />
         <WhatsAppBubble />
       </body>
     </html>

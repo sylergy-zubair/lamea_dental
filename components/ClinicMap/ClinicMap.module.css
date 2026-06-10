@@ -1,0 +1,123 @@
+.map {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  border: 1px solid var(--charcoal);
+  background-color: var(--bone);
+}
+
+.map :global(.leaflet-container) {
+  font-family: inherit;
+  background-color: var(--bone);
+}
+
+.map :global(.leaflet-popup-content-wrapper) {
+  background-color: var(--bone);
+  color: var(--graphite);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--charcoal);
+  box-shadow: 0 6px 24px rgba(15, 15, 15, 0.12);
+  padding: 0;
+}
+
+.map :global(.leaflet-popup-content) {
+  margin: 16px 18px;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.map :global(.leaflet-popup-tip) {
+  background-color: var(--bone);
+  border: 1px solid var(--charcoal);
+}
+
+.popup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 200px;
+}
+
+.popupName {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--charcoal);
+}
+
+.popupAddress {
+  margin: 0;
+  font-size: 0.8125rem;
+  color: var(--graphite);
+}
+
+.popupLink {
+  margin-top: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--charcoal);
+  text-decoration: none;
+  align-self: flex-start;
+}
+
+.popupLink:hover {
+  color: var(--graphite);
+}
+
+.map :global(.clinic-map-marker) {
+  background: transparent;
+  border: none;
+}
+
+.map :global(.clinic-map-pin) {
+  position: relative;
+  width: 32px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.map :global(.clinic-map-icon) {
+  position: relative;
+  width: 32px;
+  height: 40px;
+  fill: var(--charcoal);
+  filter: drop-shadow(0 2px 4px rgba(15, 15, 15, 0.35));
+  z-index: 2;
+}
+
+.map :global(.clinic-map-pulse) {
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  width: 18px;
+  height: 18px;
+  margin-left: -9px;
+  background-color: var(--charcoal);
+  border-radius: 50%;
+  opacity: 0.3;
+  animation: clinic-map-pulse 2s ease-out infinite;
+  z-index: 1;
+}
+
+@keyframes clinic-map-pulse {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.4;
+  }
+  100% {
+    transform: scale(2.4);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 900px) {
+  .map {
+    aspect-ratio: 4 / 3;
+  }
+}

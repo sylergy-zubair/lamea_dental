@@ -2,19 +2,19 @@ import styles from './Footer.module.css';
 
 const footerLinks = {
   treatments: [
-    { label: 'Composite Bonding', href: '#' },
-    { label: 'Teeth Whitening', href: '#' },
-    { label: 'Smile Makeover', href: '#' },
+    { label: 'Composite Bonding', href: '/#bonding' },
+    { label: 'Teeth Whitening', href: '/#whitening' },
+    { label: 'Smile Makeover', href: '/#makeover' },
   ],
   company: [
-    { label: 'About Us', href: '#about' },
-    { label: 'Results', href: '#results' },
-    { label: 'Pricing', href: '#pricing' },
+    { label: 'About Us', href: '/about' },
+    { label: 'Results', href: '/results' },
+    { label: 'Pricing', href: '/pricing' },
   ],
   support: [
-    { label: 'Aftercare', href: '#aftercare' },
-    { label: 'FAQ', href: '#faq' },
-    { label: 'Contact', href: '#contact' },
+    { label: 'Aftercare', href: '/aftercare' },
+    { label: 'FAQ', href: '/faq' },
+    { label: 'Contact', href: '/#contact' },
   ],
   legal: [
     { label: 'Privacy Policy', href: '/privacy' },
@@ -64,7 +64,10 @@ export default function Footer() {
         <div className={styles.footerCta}>
           <p>Ready to start?</p>
           <a href="https://wa.me/447700000000" className={styles.whatsappBtn}>
-            💬 WhatsApp Us
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
+            </svg>
+            WhatsApp Us
           </a>
         </div>
       </div>

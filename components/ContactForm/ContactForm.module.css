@@ -60,6 +60,62 @@
   flex-shrink: 0;
 }
 
+.mapWrapper {
+  margin-top: 32px;
+  width: 100%;
+  height: 280px;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  border: 1px solid var(--obsidian);
+}
+
+.map {
+  display: block;
+  width: 100%;
+  height: 100%;
+  filter: grayscale(0.4) contrast(1.05);
+}
+
+.markerIcon {
+  background: transparent;
+  border: none;
+}
+
+.markerIcon img {
+  width: 38px;
+  height: 50px;
+  display: block;
+}
+
+.directionsLink {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 8px 16px;
+  background-color: var(--chalk);
+  color: var(--bone);
+  font-size: 0.75rem;
+  font-weight: 600;
+  font-family: inherit;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  border: 1px solid var(--charcoal);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+
+.directionsLink:hover {
+  background-color: var(--graphite);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 900px) {
+  .mapWrapper {
+    height: 220px;
+  }
+}
+
 .form {
   background-color: var(--chalk);
   border-radius: var(--radius-sm);

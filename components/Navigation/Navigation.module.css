@@ -33,7 +33,6 @@
 }
 
 .nav.scrolled .logoImage {
-  /* Assuming the original logo is dark, this makes it white when nav is dark */
   filter: brightness(0) invert(1);
 }
 
@@ -57,7 +56,8 @@
   color: var(--bone);
 }
 
-.navLinks a:hover {
+.navLinks a:hover,
+.navLinks a.active {
   color: var(--silver);
 }
 
@@ -79,6 +79,108 @@
   transform: translateY(-1px);
 }
 
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 32px;
+  height: 32px;
+  padding: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 101;
+}
+
+.hamburgerLine {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: var(--charcoal);
+  transition: all var(--transition-base);
+}
+
+.nav.scrolled .hamburgerLine {
+  background-color: var(--bone);
+}
+
+.hamburgerLine.open:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.hamburgerLine.open:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburgerLine.open:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Mobile Menu */
+.mobileMenu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--chalk);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--transition-smooth), visibility var(--transition-smooth);
+  z-index: 99;
+}
+
+.mobileMenuOpen {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobileNavLinks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  list-style: none;
+}
+
+.mobileNavLinks a {
+  color: var(--charcoal);
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  transition: color var(--transition-base);
+}
+
+.mobileNavLinks a:hover,
+.mobileNavLinks a.active {
+  color: var(--silver);
+}
+
+.mobileCta {
+  background-color: var(--charcoal);
+  color: var(--bone);
+  padding: 16px 32px;
+  border-radius: var(--radius-sm);
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  transition: all var(--transition-base);
+}
+
+.mobileCta:hover {
+  background-color: var(--graphite);
+  transform: translateY(-1px);
+}
+
 @media (max-width: 900px) {
   .navLinks {
     display: none;
@@ -86,5 +188,9 @@
 
   .navCta {
     display: none;
+  }
+
+  .hamburger {
+    display: flex;
   }
 }

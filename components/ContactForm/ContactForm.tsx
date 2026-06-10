@@ -1,7 +1,13 @@
 'use client';
 
 import { useState } from 'react';
+import dynamic from 'next/dynamic';
 import styles from './ContactForm.module.css';
+
+const ClinicMap = dynamic(() => import('./ClinicMap'), {
+  ssr: false,
+  loading: () => <div className={styles.mapWrapper} aria-hidden="true" />,
+});
 
 export default function ContactForm() {
   const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle');
@@ -27,7 +33,7 @@ export default function ContactForm() {
                 <path d="M10 2a6 6 0 016 6c0 4-6 10-6 10S4 12 4 8a6 6 0 016-6z" />
                 <circle cx="10" cy="8" r="2" />
               </svg>
-              <span>London, UK</span>
+              <span>Lamea Dental <br />The Green Garage <br />126 Ashley Rd, <br />Hale, Altrincham WA14 2UN, UK</span>
             </div>
             <div className={styles.contactItem}>
               <svg className={styles.contactIcon} viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.5">
@@ -44,6 +50,8 @@ export default function ContactForm() {
               <span>WhatsApp available</span>
             </div>
           </div>
+
+          <ClinicMap />
         </div>
 
         <form className={styles.form} onSubmit={handleSubmit}>

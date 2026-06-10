@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import FinanceCalculator from '@/components/FinanceCalculator/FinanceCalculator';
 import styles from './pricing.module.css';
 
 export const metadata: Metadata = {
@@ -61,6 +62,8 @@ export default function PricingPage() {
             </div>
           ))}
         </section>
+
+        <FinanceCalculator />
 
         <section className={styles.consultation}>
           <p className={styles.consultationLabel}>Consultation</p>
