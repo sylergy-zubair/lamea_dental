@@ -78,8 +78,8 @@ export default function Hero() {
             </div>
           </div>
           <p className={styles.heroSubtext}>
-            Expert composite bonding in London. Transparent pricing, AI preview,
-            and same-day results — no commitment required.
+          Luxury, non invasive smile enhancement in the North West. <br />
+          Smile Experts — 0% finance available.
           </p>
         </div>
       </div>
