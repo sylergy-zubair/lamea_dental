@@ -31,14 +31,15 @@ export default function Hero() {
 
   return (
     <section className={styles.hero}>
-      <video
-        className={styles.heroVideo}
-        autoPlay
-        muted
-        loop
-        playsInline
-        src="/lamea-dental.mp4"
-      />
+      <div style={{ position: 'relative', paddingTop: '56.25%' }}>
+        <iframe
+          src="https://customer-tbs16824e170ohjv.cloudflarestream.com/c121078f2791c0ab6cfe3ff55f8d2ff6/iframe?muted=true&loop=true&autoplay=true&poster=https%3A%2F%2Fcustomer-tbs16824e170ohjv.cloudflarestream.com%2Fc121078f2791c0ab6cfe3ff55f8d2ff6%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D%26height%3D600&controls=true"
+          loading="lazy"
+          style={{ border: 'none', position: 'absolute', top: 0, left: 0, height: '100%', width: '100%' }}
+          allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
+          allowFullScreen
+        ></iframe>
+      </div>
       <div className={styles.heroOverlay} />
       <div className={styles.heroInner}>
         <div className={styles.heroContent}>
