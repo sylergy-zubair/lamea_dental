@@ -9,6 +9,25 @@
   overflow: hidden;
 }
 
+.heroMedia {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.heroIframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100vw;
+  height: 56.25vw;
+  min-height: 100%;
+  min-width: 177.77vh;
+  border: 0;
+  transform: translate(-50%, -50%);
+}
+
 .heroVideo {
   position: absolute;
   inset: 0;
