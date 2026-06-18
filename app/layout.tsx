@@ -11,6 +11,9 @@ const bricolage = Bricolage_Grotesque({ subsets: ['latin'], variable: '--font-he
 export const metadata: Metadata = {
   title: 'Lamea Dental — Affordable Composite Bonding',
   description: 'Transform your smile with expert composite bonding. Transparent pricing, AI smile preview, and same-day results.',
+  icons: {
+    icon: '/s_favi.svg',
+  },
 };
 
 export default function RootLayout({
