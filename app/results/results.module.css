@@ -135,6 +135,19 @@
   line-height: 1.6;
 }
 
+.matcherPrompt {
+  text-align: center;
+  color: #7a6f66;
+  font-size: 16px;
+  margin-bottom: 48px;
+}
+
+.matcherPrompt a {
+  color: #2e2520;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
 .cta {
   text-align: center;
   padding: clamp(40px, 6vw, 80px) 0 clamp(60px, 8vw, 120px);

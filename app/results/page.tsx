@@ -64,6 +64,11 @@ export default function ResultsPage() {
           ))}
         </section>
 
+        <p className={styles.matcherPrompt}>
+          Not sure what you need?{' '}
+          <Link href="/matcher">Find your treatment in 2 minutes →</Link>
+        </p>
+
         <section className={styles.cta}>
           <p className={styles.ctaText}>
             Want to see what&apos;s possible for your smile?
