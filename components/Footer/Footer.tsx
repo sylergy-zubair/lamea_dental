@@ -1,3 +1,4 @@
+import { getSiteSettings } from '@/lib/wordpress/siteSettings';
 import styles from './Footer.module.css';
 
 const footerLinks = {
@@ -23,16 +24,15 @@ const footerLinks = {
   ],
 };
 
-export default function Footer() {
+export default async function Footer() {
+  const settings = await getSiteSettings();
+
   return (
     <footer className={styles.footer}>
       <div className={`container ${styles.footerTop}`}>
         <div className={styles.footerBrand}>
           <h3>LAMEA DENTAL</h3>
-          <p>
-            Expert composite bonding in London. Transparent pricing,
-            AI-powered smile preview, and results that speak for themselves.
-          </p>
+          <p>{settings.footerDescription}</p>
         </div>
 
         <div className={styles.footerCol}>
@@ -64,7 +64,7 @@ export default function Footer() {
 
         <div className={styles.footerCta}>
           <p>Ready to start?</p>
-          <a href="https://wa.me/447700000000" className={styles.whatsappBtn}>
+          <a href={`https://wa.me/${settings.whatsappNumber}`} className={styles.whatsappBtn}>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
               <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
             </svg>

@@ -5,7 +5,7 @@ import ClientResults from '@/components/ClientResults/ClientResults';
 import TreatmentCards from '@/components/TreatmentCards/TreatmentCards';
 import ValueStack from '@/components/ValueStack/ValueStack';
 import AIPreview from '@/components/AIPreview/AIPreview';
-import ContactForm from '@/components/ContactForm/ContactForm';
+import ContactSection from '@/components/ContactForm/ContactSection';
 
 export default function Home() {
   return (
@@ -17,7 +17,7 @@ export default function Home() {
       <TreatmentCards />
       <SocialProof />
       <AIPreview />
-      <ContactForm />
+      <ContactSection />
     </main>
   );
 }
