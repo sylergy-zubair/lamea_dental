@@ -34,7 +34,7 @@ export default async function PricingPage() {
         </section>
 
         <section className={styles.treatmentGrid}>
-          {treatments.map((t, i) => (
+          {treatments.map((t) => (
             <div key={t.id} className={styles.treatmentCard}>
               <p className={styles.treatmentName}>{t.title}</p>
               <p className={styles.treatmentPrice}>

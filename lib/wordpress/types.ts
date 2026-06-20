@@ -1,8 +1,8 @@
 export type Treatment = {
   id: string;
   title: string;
-  content: string;
-  excerpt: string;
+  content?: string;
+  excerpt?: string;
   priceFrom: number;
   priceTo: number;
   includes: string;
