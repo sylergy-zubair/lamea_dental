@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { getResultCases } from '@/lib/wordpress/resultCases';
 import styles from './results.module.css';
 
 export const metadata: Metadata = {
@@ -7,30 +8,9 @@ export const metadata: Metadata = {
   description: 'Real outcomes from real people. See what composite bonding can do for your smile.',
 };
 
-const cases = [
-  {
-    image: 'https://picsum.photos/seed/lamea-result-1/600/500',
-    treatment: 'Composite Bonding — Gaps',
-    description: 'Closed spacing between front teeth with natural-looking composite',
-  },
-  {
-    image: 'https://picsum.photos/seed/lamea-result-2/600/500',
-    treatment: 'Composite Bonding — Chipped Tooth',
-    description: 'Restored a chipped front tooth to match surrounding teeth',
-  },
-  {
-    image: 'https://picsum.photos/seed/lamea-result-3/600/500',
-    treatment: 'Composite Bonding — Discoloration',
-    description: 'Masked stubborn discoloration for a uniform, bright smile',
-  },
-  {
-    image: 'https://picsum.photos/seed/lamea-result-4/600/500',
-    treatment: 'Composite Bonding — Shape',
-    description: 'Reshaped worn-down teeth for a more balanced smile line',
-  },
-];
+export default async function ResultsPage() {
+  const cases = await getResultCases();
 
-export default function ResultsPage() {
   return (
     <main className={styles.page}>
       <div className={`container ${styles.container}`}>
@@ -45,20 +25,20 @@ export default function ResultsPage() {
         </section>
 
         <section className={styles.caseGrid}>
-          {cases.map((caseItem, i) => (
-            <div key={i} className={styles.caseCard}>
+          {cases.map((caseItem) => (
+            <div key={caseItem.id} className={styles.caseCard}>
               <div className={styles.caseLabels}>
                 <span className={`${styles.caseLabel} ${styles.caseLabelBefore}`}>Before</span>
                 <span className={`${styles.caseLabel} ${styles.caseLabelAfter}`}>After</span>
               </div>
               <img
-                src={caseItem.image}
-                alt={caseItem.treatment}
+                src={caseItem.afterImage || `https://picsum.photos/seed/${caseItem.id}/600/500`}
+                alt={`${caseItem.title} — after`}
                 className={styles.caseImage}
               />
               <div className={styles.caseInfo}>
-                <p className={styles.caseTreatment}>{caseItem.treatment}</p>
-                <p className={styles.caseDescription}>{caseItem.description}</p>
+                <p className={styles.caseTreatment}>{caseItem.treatmentType}</p>
+                <p className={styles.caseDescription}>{caseItem.caseDescription}</p>
               </div>
             </div>
           ))}
