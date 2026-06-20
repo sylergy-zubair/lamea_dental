@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import FinanceCalculator from '@/components/FinanceCalculator/FinanceCalculator';
+import { getTreatments } from '@/lib/wordpress/treatments';
 import styles from './pricing.module.css';
 
 export const metadata: Metadata = {
@@ -8,35 +9,14 @@ export const metadata: Metadata = {
   description: 'Transparent pricing for all treatments. No hidden fees, no surprises.',
 };
 
-const treatments = [
-  {
-    name: 'Composite Bonding',
-    price: '£150–£400 per tooth',
-    includes: 'Material, application, shaping, and polish',
-  },
-  {
-    name: 'Teeth Whitening',
-    price: '£250–£500',
-    includes: 'In-clinic session plus custom trays for home',
-  },
-  {
-    name: 'Smile Makeover',
-    price: '£800–£2,500',
-    includes: 'Full assessment, personalised treatment plan, composite work',
-  },
-  {
-    name: 'Tooth Recontouring',
-    price: '£100–£300 per tooth',
-    includes: 'Shaping, polishing, minor adjustments',
-  },
-  {
-    name: 'Chip Repair',
-    price: '£100–£250 per tooth',
-    includes: 'Single tooth repair with natural colour match',
-  },
-];
+function formatPrice(from: number, to: number): string {
+  if (from === to) return `£${from}`;
+  return `£${from}–£${to}`;
+}
 
-export default function PricingPage() {
+export default async function PricingPage() {
+  const treatments = await getTreatments();
+
   return (
     <main className={styles.page}>
       <div className={`container ${styles.container}`}>
@@ -55,9 +35,16 @@ export default function PricingPage() {
 
         <section className={styles.treatmentGrid}>
           {treatments.map((t, i) => (
-            <div key={i} className={styles.treatmentCard}>
-              <p className={styles.treatmentName}>{t.name}</p>
-              <p className={styles.treatmentPrice}>{t.price}</p>
+            <div key={t.id} className={styles.treatmentCard}>
+              <p className={styles.treatmentName}>{t.title}</p>
+              <p className={styles.treatmentPrice}>
+                {formatPrice(t.priceFrom, t.priceTo)}
+                {t.title.toLowerCase().includes('bonding') ||
+                t.title.toLowerCase().includes('recontour') ||
+                t.title.toLowerCase().includes('chip')
+                  ? ' per tooth'
+                  : ''}
+              </p>
               <p className={styles.treatmentIncludes}>{t.includes}</p>
             </div>
           ))}
