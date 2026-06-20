@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
 import styles from './ValueStack.module.css';
 
@@ -7,6 +8,7 @@ interface Value {
   icon: React.ReactNode;
   title: string;
   text: string;
+  href?: string;
 }
 
 const values: Value[] = [
@@ -22,11 +24,12 @@ const values: Value[] = [
   {
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-        <path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 1 1 7.072 0l-.548.547A3.374 3.374 0 0 0 14 18.469V19a2 2 0 1 1-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" strokeLinecap="round" strokeLinejoin="round"/>
+        <path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2M9 5a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2M9 5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2" strokeLinecap="round" strokeLinejoin="round"/>
       </svg>
     ),
-    title: 'AI Smile Preview',
-    text: 'See your new smile before you commit.',
+    title: 'Find Your Treatment',
+    text: 'Answer 4 questions. Get a personalised recommendation.',
+    href: '/matcher',
   },
   {
     icon: (
@@ -81,9 +84,19 @@ export default function ValueStack() {
         <div className={styles.grid}>
           {values.map((value, i) => (
             <div key={value.title} className={styles.card} style={{ '--delay': `${i * 0.15}s` } as React.CSSProperties}>
-              <div className={styles.icon}>{value.icon}</div>
-              <h3 className={styles.cardTitle}>{value.title}</h3>
-              <p className={styles.cardText}>{value.text}</p>
+              {value.href ? (
+                <Link href={value.href} className={styles.cardLink}>
+                  <div className={styles.icon}>{value.icon}</div>
+                  <h3 className={styles.cardTitle}>{value.title}</h3>
+                  <p className={styles.cardText}>{value.text}</p>
+                </Link>
+              ) : (
+                <>
+                  <div className={styles.icon}>{value.icon}</div>
+                  <h3 className={styles.cardTitle}>{value.title}</h3>
+                  <p className={styles.cardText}>{value.text}</p>
+                </>
+              )}
             </div>
           ))}
         </div>

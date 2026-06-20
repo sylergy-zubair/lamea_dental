@@ -10,6 +10,7 @@ const navLinks = [
   { label: 'About', href: '/about' },
   { label: 'Pricing', href: '/pricing' },
   { label: 'Results', href: '/results' },
+  { label: 'Find Your Treatment', href: '/matcher' },
   { label: 'FAQ', href: '/faq' },
   { label: 'Aftercare', href: '/aftercare' },
 ];

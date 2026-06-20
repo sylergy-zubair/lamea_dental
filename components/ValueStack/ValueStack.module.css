@@ -143,6 +143,12 @@
   line-height: 1.7;
 }
 
+.cardLink {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
 @media (max-width: 1024px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
