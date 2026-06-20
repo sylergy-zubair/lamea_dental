@@ -10,6 +10,7 @@ const footerLinks = {
     { label: 'About Us', href: '/about' },
     { label: 'Results', href: '/results' },
     { label: 'Pricing', href: '/pricing' },
+    { label: 'Find Your Treatment', href: '/matcher' },
   ],
   support: [
     { label: 'Aftercare', href: '/aftercare' },
