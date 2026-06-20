@@ -1,0 +1,17 @@
+.progress {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.segment {
+  height: 4px;
+  flex: 1;
+  border-radius: 2px;
+  background: #d4cfc8;
+  transition: background 0.3s ease;
+}
+
+.filled {
+  background: #2e2520;
+}
