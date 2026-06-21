@@ -8,7 +8,7 @@ import styles from './ContactForm.module.css';
 
 const businessIcon = L.divIcon({
   className: styles.markerIcon,
-  html: `<img src="/marker.png?v=${Date.now()}" alt="Lamea Dental" />`,
+  html: '<img src="/marker.png" alt="Lamea Dental" />',
   iconSize: [40, 53],
   iconAnchor: [20, 53],
   popupAnchor: [0, -48],
