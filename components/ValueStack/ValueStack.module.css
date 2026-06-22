@@ -32,11 +32,11 @@
 }
 
 .sectionLabel {
-  font-size: 0.85rem;
+  font-size: 1.5rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.2em;
-  color: var(--silver);
+  color: #161616;;
   margin-bottom: 16px;
 }
 

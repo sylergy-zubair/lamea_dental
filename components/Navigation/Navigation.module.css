@@ -44,7 +44,8 @@
 }
 
 .navLinks a {
-  color: var(--charcoal);
+  color: var(--bone);
+  opacity: 0.5;
   font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.1em;
@@ -54,6 +55,7 @@
 
 .nav.scrolled .navLinks a {
   color: var(--bone);
+  opacity: 1;
 }
 
 .navLinks a:hover,

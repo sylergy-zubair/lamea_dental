@@ -38,8 +38,8 @@
      id="defs1" /><g
      id="layer1"
      transform="translate(-2.589041,-62.506848)"
-     style="fill:#e9e4d8;fill-opacity:1"><rect
-       style="fill:#e9e4d8;fill-opacity:1;stroke-width:0.264583"
+     style="fill:#333333;fill-opacity:1"><rect
+       style="fill:#333333;fill-opacity:1;stroke-width:0.264583"
        id="rect1"
        width="204.90411"
        height="195.65753"
@@ -48,12 +48,12 @@
        ry="8"
        transform="translate(0)" /><text
        xml:space="preserve"
-       style="fill:#333333;fill-opacity:1;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:139.651px;font-family:Forum;-inkscape-font-specification:'Forum, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:8.58276px;writing-mode:lr-tb;direction:ltr;stroke-width:2.90939"
+       style="fill:#ffffff;fill-opacity:1;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:139.651px;font-family:Forum;-inkscape-font-specification:'Forum, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:8.58308333px;writing-mode:lr-tb;direction:ltr;stroke-width:2.90939"
        x="24.988983"
        y="206.42043"
        id="text1"
        transform="translate(0)"><tspan
          id="tspan1"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:139.651px;font-family:Forum;-inkscape-font-specification:'Forum, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#333333;fill-opacity:1;stroke-width:2.90939"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:139.651px;font-family:Forum;-inkscape-font-specification:'Forum, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;fill-opacity:1;stroke-width:2.90939;letter-spacing:8.58308333px"
          x="24.988983"
          y="206.42043">LD</tspan></text></g></svg>

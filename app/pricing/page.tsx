@@ -167,23 +167,7 @@ export default function PricingPage() {
 
   return (
     <main className={styles.page}>
-      <nav className={styles.nav}>
-        <div className={styles.wordmark}>
-          <span>L</span>
-          <span>A</span>
-          <span className={styles.wordmarkM}>M</span>
-          <span>E</span>
-          <span>A</span>
-        </div>
-        <div className={styles.navLinks}>
-          <a href="/about">About</a>
-          <a href="/pricing" className={styles.active}>
-            Pricing
-          </a>
-          <a href="/faq">FAQ</a>
-          <a href="/aftercare">Aftercare</a>
-        </div>
-      </nav>
+     
 
       <div className={styles.wrap}>
         {/* Intro */}
