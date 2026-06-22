@@ -10,6 +10,14 @@
 
   --font-sans: 'Inter', system-ui, sans-serif;
 
+  /* Pricing palette */
+  --pr-cream: #efe8da;
+  --pr-card: #f6f1e7;
+  --pr-ink: #211f1a;
+  --pr-soft: #6b6456;
+  --pr-gold: #9c7c3f;
+  --pr-line: rgba(33, 31, 26, 0.13);
+
   --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.06);
   --shadow-hover: 0 8px 30px rgba(0, 0, 0, 0.1);
 
