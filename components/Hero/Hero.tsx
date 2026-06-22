@@ -80,8 +80,8 @@ export default function Hero() {
             </div>
           </div>
           <p className={styles.heroSubtext}>
-          Luxury, non invasive smile enhancement in the North West. <br />
-          Smile Experts — 0% finance available.
+          Beautifully crafted smiles. <br />
+          Preserved, not replaced - 0% finance available.
           </p>
         </div>
       </div>
