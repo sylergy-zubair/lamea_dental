@@ -35,10 +35,10 @@ export default function Navigation() {
       <div className={`container ${styles.navInner}`}>
         <Link href="/" className={styles.logo}>
           <Image
-            src="/images/logo.png"
+            src="/images/lamea_logo.svg"
             alt="Lamea Dental"
-            width={120}
-            height={32}
+            width={165}
+            height={44}
             className={styles.logoImage}
             priority
           />

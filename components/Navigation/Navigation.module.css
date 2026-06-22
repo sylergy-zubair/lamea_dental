@@ -27,7 +27,7 @@
 }
 
 .logoImage {
-  height: 32px;
+  height: 64px;
   width: auto;
   transition: filter var(--transition-smooth);
 }
