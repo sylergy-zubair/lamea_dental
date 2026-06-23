@@ -1,10 +1,20 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { writeFile, mkdir } from 'fs/promises';
-import { join } from 'path';
 import { randomUUID } from 'crypto';
+import { putObject } from '@/lib/r2';
 
 const ALLOWED_MIME = ['image/jpeg', 'image/png', 'image/webp', 'image/heic', 'image/heif'];
 const MAX_SIZE = 10 * 1024 * 1024; // 10MB
+
+function mimeToExt(mime: string): string {
+  const map: Record<string, string> = {
+    'image/jpeg': 'jpg',
+    'image/png': 'png',
+    'image/webp': 'webp',
+    'image/heic': 'heic',
+    'image/heif': 'heif',
+  };
+  return map[mime] || 'jpg';
+}
 
 export async function POST(req: NextRequest) {
   try {
@@ -20,7 +30,10 @@ export async function POST(req: NextRequest) {
 
     if (!ALLOWED_MIME.includes(file.type)) {
       return NextResponse.json(
-        { success: false, error: 'Only image files (JPEG, PNG, WebP, HEIC) are accepted' },
+        {
+          success: false,
+          error: 'Only image files (JPEG, PNG, WebP, HEIC) are accepted',
+        },
         { status: 400 }
       );
     }
@@ -32,19 +45,18 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    const ext = file.name.split('.').pop() || 'jpg';
-    const filename = `${randomUUID()}.${ext}`;
-    const dir = join(process.cwd(), 'public', 'uploads', 'consultation');
+    const ext = mimeToExt(file.type);
+    const key = `uploads/${randomUUID()}.${ext}`;
 
-    await mkdir(dir, { recursive: true });
+    const buffer = new Uint8Array(await file.arrayBuffer());
+    await putObject(key, buffer, file.type);
 
-    const buffer = Buffer.from(await file.arrayBuffer());
-    await writeFile(join(dir, filename), buffer);
+    const publicUrl = process.env.R2_PUBLIC_URL;
+    const url = publicUrl
+      ? `${publicUrl.replace(/\/$/, '')}/${key}`
+      : `/api/upload/${key}`;
 
-    return NextResponse.json({
-      success: true,
-      url: `/uploads/consultation/${filename}`,
-    });
+    return NextResponse.json({ success: true, url });
   } catch (error) {
     console.error('Upload error:', error);
     return NextResponse.json(

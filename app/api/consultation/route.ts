@@ -1,7 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { readFile, writeFile, mkdir } from 'fs/promises';
-import { join } from 'path';
 import { randomUUID } from 'crypto';
+import { putObject } from '@/lib/r2';
 
 interface Lead {
   id: string;
@@ -12,25 +11,8 @@ interface Lead {
   createdAt: string;
 }
 
-const DATA_FILE = join(process.cwd(), 'data', 'leads.json');
-
 function validateEmail(email: string): boolean {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-}
-
-async function saveLead(lead: Lead): Promise<void> {
-  await mkdir(join(process.cwd(), 'data'), { recursive: true });
-
-  let leads: Lead[] = [];
-  try {
-    const raw = await readFile(DATA_FILE, 'utf-8');
-    leads = JSON.parse(raw);
-  } catch {
-    // File doesn't exist yet — start fresh
-  }
-
-  leads.push(lead);
-  await writeFile(DATA_FILE, JSON.stringify(leads, null, 2));
 }
 
 export async function POST(req: NextRequest) {
@@ -64,7 +46,12 @@ export async function POST(req: NextRequest) {
       createdAt: new Date().toISOString(),
     };
 
-    await saveLead(lead);
+    // Save as individual JSON file in R2 — one file per lead, no race conditions
+    await putObject(
+      `leads/${lead.id}.json`,
+      new TextEncoder().encode(JSON.stringify(lead, null, 2)),
+      'application/json'
+    );
 
     return NextResponse.json({ success: true, id: lead.id }, { status: 201 });
   } catch (error) {

@@ -20,4 +20,8 @@
 - When dismissing a success modal/overlay, reset the form to its initial state (clear fields, reset status). Confidence: 0.65
 - Use the same color palette, font, and styling across pages for visual consistency. Confidence: 0.70
 - Ensure all pages and forms are fully mobile responsive with proper breakpoints. Confidence: 0.70
+- Keep hamburger menu lines (close button) charcoal color regardless of scroll state — don't switch to a lighter color when scrolled. Confidence: 0.65
+
+# Infrastructure
+- Use Cloudflare R2 for file/photo storage instead of local filesystem writes. Confidence: 0.75
 
