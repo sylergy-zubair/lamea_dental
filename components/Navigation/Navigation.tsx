@@ -9,10 +9,10 @@ import styles from './Navigation.module.css';
 const navLinks = [
   { label: 'About', href: '/about' },
   { label: 'Pricing', href: '/pricing' },
-  { label: 'Results', href: '/results' },
-  { label: 'Find Your Treatment', href: '/matcher' },
+  /*{ label: 'Results', href: '/results' },*/
+  /*{ label: 'Find Your Treatment', href: '/matcher' },*/
   { label: 'FAQ', href: '/faq' },
-  { label: 'Aftercare', href: '/aftercare' },
+  /*{ label: 'Aftercare', href: '/aftercare' },*/
 ];
 
 export default function Navigation() {
@@ -57,9 +57,11 @@ export default function Navigation() {
           ))}
         </ul>
 
-        <a href="https://wa.me/447700000000" className={styles.navCta}>
-          WhatsApp Us
-        </a>
+        <div className={styles.navCtaGroup}>
+          <a href="https://wa.me/447700000000" className={styles.navCta}>
+            WhatsApp Us
+          </a>
+        </div>
 
         <button
           className={styles.hamburger}
@@ -87,9 +89,18 @@ export default function Navigation() {
             </li>
           ))}
         </ul>
-        <a href="https://wa.me/447700000000" className={styles.mobileCta}>
-          WhatsApp Us
-        </a>
+        <div className={styles.mobileCtaGroup}>
+          <Link
+            href="/consultation"
+            className={styles.mobileCtaBooking}
+            onClick={() => setMobileOpen(false)}
+          >
+            Online Consultation
+          </Link>
+          <a href="https://wa.me/447700000000" className={styles.mobileCta}>
+            WhatsApp Us
+          </a>
+        </div>
       </div>
     </nav>
   );

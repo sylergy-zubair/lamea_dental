@@ -1,0 +1,596 @@
+.page {
+  background: var(--pr-cream);
+  color: var(--pr-ink);
+  font-family: var(--font-jost), 'Jost', sans-serif;
+  min-height: 100vh;
+}
+
+.wrap {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 120px 40px 90px;
+}
+
+/* ─── Intro ─── */
+.intro {
+  text-align: center;
+  max-width: 580px;
+  margin: 0 auto 48px;
+}
+
+.eyebrow {
+  font-family: var(--font-jost), 'Jost', sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  letter-spacing: 0.42em;
+  text-transform: uppercase;
+  color: var(--pr-gold);
+  padding-left: 0.42em;
+}
+
+.h1 {
+  font-family: var(--font-forum), 'Forum', serif;
+  font-weight: 400;
+  font-size: 56px;
+  line-height: 1.02;
+  margin-top: 16px;
+  letter-spacing: 0.005em;
+  color: var(--pr-ink);
+}
+
+.lede {
+  font-family: var(--font-jost), 'Jost', sans-serif;
+  font-weight: 300;
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--pr-soft);
+  margin-top: 14px;
+}
+
+/* ─── Form card ─── */
+.panel {
+  background: var(--pr-card);
+  border: 1px solid var(--pr-line);
+  border-radius: 2px;
+  padding: 38px 38px 32px;
+}
+
+/* ─── Fields ─── */
+.field {
+  margin-bottom: 22px;
+}
+
+.fieldLabel {
+  font-family: var(--font-jost), 'Jost', sans-serif;
+  font-weight: 400;
+  font-size: 11px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--pr-gold);
+  margin-bottom: 9px;
+}
+
+.input {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background: var(--pr-card);
+  border: 1px solid var(--pr-line);
+  border-radius: 2px;
+  padding: 18px 20px;
+  font-family: var(--font-forum), 'Forum', serif;
+  font-size: 19px;
+  color: var(--pr-ink);
+  transition: border-color 0.2s, box-shadow 0.2s;
+  outline: none;
+}
+
+.input::placeholder {
+  color: rgba(33, 31, 26, 0.28);
+  font-family: var(--font-forum), 'Forum', serif;
+  font-size: 19px;
+}
+
+.input:focus {
+  border-color: var(--pr-gold);
+  box-shadow: 0 0 0 1px var(--pr-gold) inset;
+}
+
+.input:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.inputError {
+  border-color: #b33a2e;
+}
+
+.inputError:focus {
+  border-color: #b33a2e;
+  box-shadow: 0 0 0 1px #b33a2e inset;
+}
+
+.fieldError {
+  font-family: var(--font-jost), 'Jost', sans-serif;
+  font-weight: 300;
+  font-size: 12px;
+  color: #b33a2e;
+  margin-top: 6px;
+}
+
+/* ─── Upload area ─── */
+.uploadArea {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  background: var(--pr-card);
+  border: 1px dashed var(--pr-line);
+  border-radius: 2px;
+  padding: 42px 24px 38px;
+  cursor: pointer;
+  font: inherit;
+  transition: border-color 0.2s;
+  color: var(--pr-ink);
+}
+
+.uploadArea:hover {
+  border-color: var(--pr-gold);
+}
+
+.uploadArea.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.uploadIcon {
+  width: 40px;
+  height: 40px;
+  color: rgba(33, 31, 26, 0.18);
+  transition: color 0.2s;
+}
+
+.uploadArea:hover .uploadIcon {
+  color: var(--pr-gold);
+}
+
+.uploadTitle {
+  font-family: var(--font-forum), 'Forum', serif;
+  font-size: 20px;
+  color: var(--pr-soft);
+}
+
+.uploadHint {
+  font-family: var(--font-jost), 'Jost', sans-serif;
+  font-weight: 300;
+  font-size: 13px;
+  color: var(--pr-soft);
+}
+
+.uploadNote {
+  font-family: var(--font-jost), 'Jost', sans-serif;
+  font-weight: 300;
+  font-size: 10.5px;
+  color: var(--pr-soft);
+}
+
+/* ─── Preview ─── */
+.previewArea {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.previewImage {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 2px;
+  border: 1px solid var(--pr-line);
+}
+
+.previewControls {
+  display: flex;
+  gap: 10px;
+}
+
+.controlBtn {
+  flex: 1;
+  padding: 10px 20px;
+  background: transparent;
+  border: 1px solid var(--pr-line);
+  border-radius: 99px;
+  font-family: var(--font-jost), 'Jost', sans-serif;
+  font-weight: 400;
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--pr-soft);
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.controlBtn:hover {
+  border-color: var(--pr-gold);
+  color: var(--pr-ink);
+}
+
+.controlBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.controlBtnRemove {
+  color: #b33a2e;
+  border-color: rgba(179, 58, 46, 0.3);
+}
+
+.controlBtnRemove:hover {
+  border-color: #b33a2e;
+  color: #b33a2e;
+}
+
+/* ─── Submit ─── */
+.cta {
+  width: 100%;
+  margin-top: 8px;
+  height: 56px;
+  border: none;
+  border-radius: 99px;
+  cursor: pointer;
+  background: var(--pr-ink);
+  color: var(--pr-card);
+  font-family: var(--font-jost), 'Jost', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  transition: opacity 0.2s;
+}
+
+.cta:hover {
+  opacity: 0.88;
+}
+
+.cta:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* ─── Error banners ─── */
+.errorBanner {
+  background: rgba(179, 58, 46, 0.07);
+  border: 1px solid #b33a2e;
+  border-radius: 2px;
+  padding: 16px 20px;
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.errorBannerText {
+  font-family: var(--font-jost), 'Jost', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  color: #b33a2e;
+  line-height: 1.5;
+}
+
+.retryBtn {
+  padding: 8px 20px;
+  background: #b33a2e;
+  border: none;
+  border-radius: 99px;
+  color: #fff;
+  font-family: var(--font-jost), 'Jost', sans-serif;
+  font-weight: 400;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.retryBtn:hover {
+  opacity: 0.85;
+}
+
+.warningBanner {
+  background: rgba(156, 124, 63, 0.09);
+  border: 1px solid var(--pr-gold);
+  border-radius: 2px;
+  padding: 14px 18px;
+  margin-bottom: 24px;
+}
+
+.warningText {
+  font-family: var(--font-jost), 'Jost', sans-serif;
+  font-weight: 300;
+  font-size: 13px;
+  color: var(--pr-soft);
+  line-height: 1.5;
+}
+
+.fallbackBanner {
+  background: var(--pr-card);
+  border: 1px solid var(--pr-line);
+  border-radius: 2px;
+  padding: 16px 20px;
+  margin-bottom: 24px;
+}
+
+.fallbackText {
+  font-family: var(--font-jost), 'Jost', sans-serif;
+  font-weight: 300;
+  font-size: 13px;
+  color: var(--pr-soft);
+  line-height: 1.5;
+}
+
+/* ─── Disclaimer ─── */
+.disclaimer {
+  font-family: var(--font-jost), 'Jost', sans-serif;
+  font-weight: 300;
+  font-size: 10.5px;
+  line-height: 1.6;
+  color: var(--pr-soft);
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* ─── Modal overlay ─── */
+.modalBackdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: rgba(33, 31, 26, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(16px, 4vw, 48px);
+  overflow-y: auto;
+}
+
+.modal {
+  background: var(--pr-card);
+  border-radius: 2px;
+  width: 100%;
+  max-width: 720px;
+  max-height: 90vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 20px 60px rgba(33, 31, 26, 0.3);
+}
+
+.modalHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 28px 32px 0;
+}
+
+.modalTitle {
+  font-family: var(--font-forum), 'Forum', serif;
+  font-weight: 400;
+  font-size: 24px;
+  color: var(--pr-ink);
+}
+
+.modalClose {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 1px solid var(--pr-line);
+  border-radius: 50%;
+  cursor: pointer;
+  color: var(--pr-soft);
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.modalClose:hover {
+  border-color: var(--pr-gold);
+  color: var(--pr-ink);
+}
+
+.modalFooter {
+  padding: 16px 32px 24px;
+  text-align: center;
+}
+
+.backLink {
+  background: none;
+  border: none;
+  font-family: var(--font-jost), 'Jost', sans-serif;
+  font-weight: 300;
+  font-size: 13px;
+  color: var(--pr-soft);
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.backLink:hover {
+  color: var(--pr-ink);
+}
+
+/* Calendly widget — responsive height */
+.calendlyWidget {
+  min-width: 320px;
+  height: 650px;
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 768px) {
+  .h1 {
+    font-size: 44px;
+  }
+
+  .intro {
+    margin-bottom: 36px;
+  }
+}
+
+@media (max-width: 600px) {
+  .wrap {
+    padding: 100px 20px 60px;
+  }
+
+  .h1 {
+    font-size: 38px;
+  }
+
+  .lede {
+    font-size: 15px;
+  }
+
+  .intro {
+    margin-bottom: 32px;
+  }
+
+  .panel {
+    padding: 24px 20px 28px;
+  }
+
+  .input {
+    padding: 16px 18px;
+    font-size: 17px;
+  }
+
+  .input::placeholder {
+    font-size: 17px;
+  }
+
+  .uploadArea {
+    padding: 32px 16px;
+  }
+
+  .previewImage {
+    max-height: 220px;
+  }
+
+  .controlBtn {
+    padding: 12px 16px;
+  }
+
+  .cta {
+    height: 52px;
+    font-size: 13px;
+  }
+
+  .modal {
+    max-height: 95vh;
+  }
+
+  .modalHeader {
+    padding: 20px 20px 0;
+  }
+
+  .modalTitle {
+    font-size: 20px;
+  }
+
+  .modalFooter {
+    padding: 12px 20px 20px;
+  }
+}
+
+@media (max-width: 420px) {
+  .wrap {
+    padding: 90px 16px 50px;
+  }
+
+  .h1 {
+    font-size: 32px;
+    margin-top: 12px;
+  }
+
+  .lede {
+    font-size: 14px;
+  }
+
+  .intro {
+    margin-bottom: 28px;
+  }
+
+  .panel {
+    padding: 20px 16px 24px;
+    border-left: none;
+    border-right: none;
+    border-radius: 0;
+  }
+
+  .input {
+    padding: 14px 16px;
+    font-size: 16px;
+  }
+
+  .input::placeholder {
+    font-size: 16px;
+  }
+
+  .uploadArea {
+    padding: 28px 12px;
+  }
+
+  .uploadIcon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .uploadTitle {
+    font-size: 18px;
+  }
+
+  .previewControls {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .controlBtn {
+    padding: 14px 16px;
+    font-size: 12px;
+  }
+
+  .cta {
+    height: 50px;
+    font-size: 12px;
+    letter-spacing: 0.15em;
+  }
+
+  .calendlyWidget {
+    height: 480px;
+  }
+
+  .modalBackdrop {
+    padding: 0;
+  }
+
+  .modal {
+    max-height: 100vh;
+    border-radius: 0;
+    max-width: 100%;
+  }
+
+  .modalHeader {
+    padding: 16px 16px 0;
+  }
+
+  .modalTitle {
+    font-size: 18px;
+  }
+
+  .modalClose {
+    width: 32px;
+    height: 32px;
+  }
+
+  .modalFooter {
+    padding: 12px 16px 16px;
+  }
+}

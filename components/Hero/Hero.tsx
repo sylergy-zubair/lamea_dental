@@ -49,8 +49,8 @@ export default function Hero() {
               THE SMILE IS OURS  THE WORLD IS YOURS
             </h1>
             <div className={styles.heroCtas}>
-              <Button href="#consultation" variant="primary">
-                Book Your Consultation
+              <Button href="/consultation" variant="primary">
+                Book Online Consultation
               </Button>
               <div className={styles.contactWrapper} ref={contactRef}>
                 <button

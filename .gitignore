@@ -29,6 +29,14 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
+# Lead data (auto-generated)
+data/leads.json
+!data/.gitkeep
+
+# User uploads (keep directory structure)
+public/uploads/*
+!public/uploads/.gitkeep
+
 # Images (keep public assets)
 # public/*
 # !public/.gitkeep

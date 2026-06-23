@@ -63,6 +63,12 @@
   color: var(--silver);
 }
 
+.navCtaGroup {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
 .navCta {
   background-color: var(--charcoal);
   color: var(--bone);
@@ -78,6 +84,24 @@
 
 .navCta:hover {
   background-color: var(--graphite);
+  transform: translateY(-1px);
+}
+
+.navCtaBooking {
+  background-color: var(--bone);
+  color: var(--charcoal);
+  padding: 12px 24px;
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  transition: all var(--transition-base);
+  white-space: nowrap;
+}
+
+.navCtaBooking:hover {
+  background-color: var(--chalk);
   transform: translateY(-1px);
 }
 
@@ -166,6 +190,13 @@
   color: var(--silver);
 }
 
+.mobileCtaGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
 .mobileCta {
   background-color: var(--charcoal);
   color: var(--bone);
@@ -176,6 +207,8 @@
   text-transform: uppercase;
   letter-spacing: 0.08em;
   transition: all var(--transition-base);
+  text-align: center;
+  min-width: 240px;
 }
 
 .mobileCta:hover {
@@ -188,7 +221,7 @@
     display: none;
   }
 
-  .navCta {
+  .navCtaGroup {
     display: none;
   }
 

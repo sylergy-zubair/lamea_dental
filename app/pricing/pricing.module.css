@@ -542,6 +542,9 @@
 
 /* ─── Responsive ─── */
 @media (max-width: 880px) {
+  .wrap {
+    padding: 72px 32px 80px;
+  }
   .grid {
     grid-template-columns: 1fr;
     gap: 48px;
@@ -549,7 +552,152 @@
   .h1 {
     font-size: 46px;
   }
+  .intro {
+    margin-bottom: 44px;
+  }
+  .step {
+    min-height: 0;
+  }
   .navLinks {
     display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .wrap {
+    padding: 48px 20px 64px;
+  }
+  .intro {
+    margin-bottom: 28px;
+  }
+  .h1 {
+    font-size: 34px;
+    margin-top: 14px;
+  }
+  .tagline {
+    font-size: 18px;
+    margin-top: 10px;
+  }
+  .lede {
+    font-size: 15px;
+  }
+
+  /* Steps */
+  .step {
+    gap: 14px;
+    margin-bottom: 16px;
+  }
+  .stepNum {
+    width: 38px;
+    height: 38px;
+    font-size: 18px;
+  }
+  .stepTitle {
+    font-size: 20px;
+  }
+  .stepNote {
+    font-size: 13.5px;
+  }
+
+  /* Treatment dropdown */
+  .select {
+    padding: 14px 16px;
+  }
+  .select > span:first-child {
+    font-size: 17px;
+  }
+  .selectOpt {
+    font-size: 16px;
+    padding: 14px 16px;
+  }
+
+  /* Arch options */
+  .opt {
+    padding: 14px 16px;
+    gap: 12px;
+  }
+  .optArch {
+    font-size: 17px;
+  }
+  .optTeeth {
+    font-size: 10px;
+    padding: 4px 10px;
+  }
+
+  /* Finance panel */
+  .panel {
+    padding: 20px 18px 22px;
+  }
+  .selected {
+    font-size: 10px;
+    padding-bottom: 12px;
+    margin-bottom: 14px;
+  }
+  .monthlyNum {
+    font-size: 44px;
+  }
+  .monthlyMo {
+    font-size: 16px;
+  }
+  .priceLine {
+    font-size: 11.5px;
+  }
+  .badge {
+    font-size: 10px;
+    padding: 6px 14px;
+  }
+
+  /* Controls & sliders */
+  .control {
+    margin-top: 22px;
+  }
+  .controlVal {
+    font-size: 16px;
+  }
+  .sliderThumb {
+    width: 34px;
+    height: 34px;
+    border-width: 3px;
+  }
+  .sliderTrack {
+    margin: 0 6px;
+  }
+  .scale span {
+    font-size: 11px;
+  }
+
+  /* Summary */
+  .summary {
+    margin-top: 22px;
+  }
+  .srow {
+    padding: 9px 0;
+  }
+  .srow span:first-child {
+    font-size: 13px;
+  }
+  .srow span:last-child {
+    font-size: 14px;
+  }
+
+  /* CTA */
+  .cta {
+    height: 52px;
+    font-size: 13px;
+    margin-top: 18px;
+  }
+  .disclaimer {
+    font-size: 10px;
+    margin-top: 12px;
+  }
+}
+
+@media (pointer: coarse) {
+  .sliderThumb {
+    width: 38px;
+    height: 38px;
+  }
+  .sliderTrack {
+    height: 48px;
   }
 }
