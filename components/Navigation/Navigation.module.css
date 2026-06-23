@@ -128,10 +128,6 @@
   transition: all var(--transition-base);
 }
 
-.nav.scrolled .hamburgerLine {
-  background-color: var(--bone);
-}
-
 .hamburgerLine.open:nth-child(1) {
   transform: translateY(7px) rotate(45deg);
 }

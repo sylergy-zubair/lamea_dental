@@ -133,6 +133,10 @@
 }
 
 @media (max-width: 900px) {
+  .section {
+    background-attachment: scroll;
+  }
+
   .inner {
     grid-template-columns: 1fr;
   }
@@ -146,5 +150,23 @@
   .content {
     max-width: none;
     text-align: center;
+  }
+
+  .uploadArea {
+    padding: 32px 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .visual {
+    max-width: 100%;
+  }
+
+  .uploadArea {
+    padding: 24px 16px;
+  }
+
+  .text {
+    font-size: 0.9375rem;
   }
 }

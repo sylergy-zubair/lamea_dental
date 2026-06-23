@@ -116,6 +116,29 @@
   }
 }
 
+@media (max-width: 600px) {
+  .input,
+  .textarea {
+    padding: 16px;
+  }
+
+  .submit {
+    padding: 18px 28px;
+  }
+
+  .directionsLink {
+    padding: 12px 20px;
+  }
+
+  .form {
+    padding: 24px 18px;
+  }
+
+  .mapWrapper {
+    height: 180px;
+  }
+}
+
 .form {
   background-color: var(--chalk);
   border-radius: var(--radius-sm);

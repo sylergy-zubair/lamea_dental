@@ -36,7 +36,7 @@ export default function ClientResults() {
                 alt={result.alt}
                 fill
                 className={styles.resultImage}
-                sizes="350px"
+                sizes="(max-width: 768px) 280px, 350px"
                 loading="lazy"
               />
             </div>

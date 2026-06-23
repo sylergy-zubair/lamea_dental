@@ -81,6 +81,10 @@
     padding: 60px 0;
   }
 
+  .heading {
+    font-size: 1.75rem;
+  }
+
   .imageWrapper {
     width: 280px;
   }
